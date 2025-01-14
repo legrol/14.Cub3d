@@ -22,6 +22,8 @@
 # include <math.h>			// for PI, etc.
 # include <fcntl.h>			// for open, O_RDONLY, etc.
 # include <stdio.h>			// for printf...
+# include <string.h>		// for strdup, strlen, etc.
+# include <errno.h>			// for use errno, perror ...
 
 // ============================================================================
 // Access to my libraries
@@ -38,16 +40,31 @@
 // ============================================================================
 // Structures
 // ============================================================================
-typedef struct s_fdf
+typedef struct s_map
+{
+	int			map_width;
+	int			map_height;
+	// int32_t			***superarray;
+	// int32_t			z_minimum;
+	// int32_t			z_maximum;
+}					t_map;
+
+typedef struct s_cub3d
 {
 	mlx_t			*mlx;
 	mlx_image_t		*img;
-}					t_fdf;
+	t_map			*map;
+	// t_cam			*cam;
+	// t_mouse			*mouse;
+	// int				steep;
+	// int				win_width;
+	// int				win_height;
+}					t_cub3d;
 
 // ============================================================================
 // Several controls
 // ============================================================================
-
+int		ft_control_args(int32_t argc, char **argv);
 
 // ============================================================================
 // Drawing functions

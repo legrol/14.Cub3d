@@ -13,20 +13,13 @@
 #ifndef FT_MACROS_H
 # define FT_MACROS_H
 
-# define NUM_ARGV_ERR			"❗Arguments are not accepted."
-# define QUOTES_ERR				"❗Syntax error. Open quotes."
-# define WHITOUT_COMMAND_ERR	"❗Sorry, i need a command to work."
-# define TOKEN_ERR				": order not found"
+# define DEFAULT_WIDTH			1920
+# define DEFAULT_HEIGHT			1080
+# define WIDTH					1080
+# define HEIGHT					720
 
-# define PROMPT					"minishell: ~ $ "
-# define STDIN					1
-# define STDOUT					2
-# define STDERR					3
-# define EX_SIGINT				130
-# define EX_SIGQUIT				131
-# define MAX_DIGITS				19
-# define MAX_NEG				20
-# define LLONGMAX				"9223372036854775807"
-# define LLONGMIN				"-9223372036854775808"
+# define INIT_ERR				"42Cub3d : ==> "
+# define NUM_ARGV_ERR			"❗1️⃣ Incorrect number of arguments, expected \
+								one."
 
 #endif
