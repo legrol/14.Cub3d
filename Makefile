@@ -45,8 +45,6 @@ SRC_DIR				= ./src
 ERRORS_DIR			= ./errors
 CONTROL_DIR			= ./control
 IMAGES_DIR			= ./imgs
-MAPS_DIR			= ./maps
-MAPS_NVALIDS		= ./maps_non_valids
 # EXEC_DIR			= ./exec
 # FREE_DIR			= ./free
 INIT_DIR			= ./init
@@ -62,8 +60,6 @@ INCLUDES_DIR		= ./includes
 
 # ══ Directories Bonus ═══════════════════════════════════════════════════════ #
 #    -----------                                                               #
-
-MAPS_BONUS_DIR		= ./maps_bonus
 
 
 # ══ Library Archives ════════════════════════════════════════════════════════ #
@@ -90,7 +86,7 @@ LFLAGS				= -L${LIBRARIES}/${LIBFT_DIR} -lft \
 # ══ Sources ═════════════════════════════════════════════════════════════════ #
 #    -------                                                                   #
 
-SRC 				= ${SRC_DIR}/minishell.c
+SRC 				= ${SRC_DIR}/cub3D.c
 
 GNL					= ${LIBRARIES}/${GNL_DIR}/get_next_line.c \
 						${LIBRARIES}/${GNL_DIR}/get_next_line_utils.c \
@@ -102,6 +98,9 @@ ERR					= ${ERRORS_DIR}/ft_manage_err.c
 INT					= ${INIT_DIR}/xxxx.c
 
 UTL					= ${UTILS_DIR}/xxxxx.c
+
+CTRL				= ${CONTROL_DIR}/ft_control_args.c \
+						${CONTROL_DIR}/ft_ext_valid.c
 
 # FRE					= ${FREE_DIR}/xxxx.c
 
@@ -115,7 +114,8 @@ OBJ_GNL				= $(patsubst ${LIBRARIES}/${GNL_DIR}/%.c, ${OBJ_DIR}/%.o, \
 OBJ_ERR				= $(patsubst ${ERRORS_DIR}/%.c, ${OBJ_DIR}/%.o, ${ERR})
 OBJ_INT				= $(patsubst ${INIT_DIR}/%.c, ${OBJ_DIR}/%.o, ${INT})
 OBJ_UTL				= $(patsubst ${UTILS_DIR}/%.c, ${OBJ_DIR}/%.o, ${UTL})
-OBJ_FRE				= $(patsubst ${FREE_DIR}/%.c, ${OBJ_DIR}/%.o, ${FRE})
+OBJ_CTRL			= $(patsubst ${CONTROL_DIR}/%.c, ${OBJ_DIR}/%.o, ${CTRL})
+# OBJ_FRE				= $(patsubst ${FREE_DIR}/%.c, ${OBJ_DIR}/%.o, ${FRE})
 # OBJ_PAR				= $(patsubst ${PARSER_DIR}/%.c, ${OBJ_DIR}/%.o, ${PAR})
 # OBJ_EXE				= $(patsubst ${EXEC_DIR}/%.c, ${OBJ_DIR}/%.o, ${EXE})
 
@@ -126,11 +126,11 @@ all: ${NAME}
 
 ${NAME}: ftlibft ftprintf ftexamft  ${OBJ_SRC} ${OBJ_GNL} \
 									${OBJ_ERR} ${OBJ_INT} ${OBJ_UTL} \
-									${OBJ_FRE} ${OBJ_PAR}
+									${OBJ_CTRL} ${OBJ_FRE} ${OBJ_PAR}
 	@echo "$(YELLOW)Compiling root ...$(DEF_COLOR)"
 	@${CC} ${CFLAGS} ${IFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_GNL} ${OBJ_ERR} \
 									${OBJ_INT} ${OBJ_UTL} ${OBJ_FRE} \
-									${OBJ_PAR} ${LFLAGS}
+									${OBJ_CTRL} ${OBJ_PAR} ${LFLAGS}
 	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
@@ -150,6 +150,10 @@ ${OBJ_DIR}/%.o: ${INIT_DIR}/%.c
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
 ${OBJ_DIR}/%.o: ${UTILS_DIR}/%.c
+	@${MKD} $(dir $@)
+	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
+
+${OBJ_DIR}/%.o: ${CONTROL_DIR}/%.c
 	@${MKD} $(dir $@)
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
