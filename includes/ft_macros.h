@@ -21,5 +21,7 @@
 # define INIT_ERR				"42Cub3d : ==> "
 # define NUM_ARGV_ERR			"❗1️⃣ Incorrect number of arguments, expected \
 								one."
+# define SHORT_NAME_ERR			"🗺️ Map name is very short!!!"
+# define EXT_ERR				"❌ⓔⓧⓣ File extension error!!!"
 
 #endif
