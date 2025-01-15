@@ -43,6 +43,7 @@ typedef struct s_map
 {
 	int			map_width;
 	int			map_height;
+	char		**map;
 	// int32_t			***superarray;
 	// int32_t			z_minimum;
 	// int32_t			z_maximum;
@@ -61,15 +62,16 @@ typedef struct s_cub3d
 }					t_cub3d;
 
 // ============================================================================
-// Several controls
+// Control functions
 // ============================================================================
-int		ft_control_args(int32_t argc, char **argv);
+int		ft_control_args(int argc, char **argv);
 int		ft_ext_valid(char *map_name);
 
 // ============================================================================
-// Drawing functions
+// Verify functions
 // ============================================================================
-
+int		ft_verify_extremes(t_cub3d *details, char **map);
+int		ft_verify_map(t_cub3d *input);
 
 // ============================================================================
 // Management errors

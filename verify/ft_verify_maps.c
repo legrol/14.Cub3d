@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ext_valid.c                                     :+:      :+:    :+:   */
+/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-15 16:19:33 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-01-15 16:19:33 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025-01-15 18:12:45 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025-01-15 18:12:45 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
 /**
- * The function "ft_ext_valid" check the name of the map and map name 
- * extension.
  * 
- * @param char *map_name The name of map passed by argv[1].
+ * 
  * 
  */
 
-int	ft_ext_valid(char *map_name)
+int	ft_verify_map(t_cub3d *input)
 {
-	int	size;
+	int	warning;
 
-	size = ft_strlen(map_name);
-	if (size < 4)
-	{
-		ft_manage_err(BDRED INIT_ERR YELLOW SHORT_NAME_ERR RESET);
-		return (0);
-	}
-	if ((ft_strncmp(map_name + size - 4, ".cub", 4) != 0))
-	{
-		ft_manage_err(BDRED INIT_ERR YELLOW EXT_ERR RESET);
-		return (0);
-	}
-	return (1);
+	warning = 0;
+	if (!input || !input->map->map)
+		return (EXIT_FAILURE);
+	if (ft_verify_extremes(input, input->map->map))
+		warning = 1;
+	if (warning == 1)
+		return (EXIT_FAILURE);
+	else
+		return (EXIT_SUCCESS);
 }

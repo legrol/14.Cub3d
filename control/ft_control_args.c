@@ -22,7 +22,7 @@
  * 
  */
 
-int	ft_control_args(int32_t argc, char **argv)
+int	ft_control_args(int argc, char **argv)
 {
 	if (argc != 2)
 	{
