@@ -6,7 +6,7 @@
 /*   By: drosales <drosales@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/15 19:36:36 by drosales         ###   ########.fr       */
+/*   Updated: 2025/01/15 19:55:32 by drosales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,6 @@
 // ============================================================================
 // Structures
 // ============================================================================
-typedef struct s_map
-{
-	int			map_width;
-	int			map_height;
-	// int32_t			***superarray;
-	// int32_t			z_minimum;
-	// int32_t			z_maximum;
-}					t_map;
 
 typedef struct s_cub3d
 {
@@ -146,12 +138,14 @@ typedef struct s_textures
 // ============================================================================
 // Control functions
 // ============================================================================
+
 int		ft_control_args(int argc, char **argv);
 int		ft_ext_valid(char *map_name);
 
 // ============================================================================
 // Verify functions
 // ============================================================================
+
 int		ft_verify_extremes(t_cub3d *details, char **map);
 int		ft_verify_map(t_cub3d *input);
 
