@@ -163,6 +163,11 @@ int		ft_verify_map(t_cub3d *input);
 // Initialization functions
 // ============================================================================
 
+void    ft_init_coord_flags(t_cub3d *structure);
+void    ft_init_player(t_cub3d *structure);
+void    ft_init_textures(t_cub3d *structure);
+int 	ft_setup(t_cub3d *structure);
+void    ft_init_walls(t_cub3d *structure, mlx_image_t **image);
 
 // ============================================================================
 // Peripherals

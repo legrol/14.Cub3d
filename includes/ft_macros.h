@@ -26,5 +26,7 @@
 								one."
 # define SHORT_NAME_ERR			"🗺️ Map name is very short!!!"
 # define EXT_ERR				"❌ⓔⓧⓣ File extension error!!!"
+# define FLOOR_OR_SKY_ERR		"42Cub3D: Error rendering the ground or the sky."
+# define IMG_TO_WINDOW_ERR		"42Cub3D: Error in function while rendering process."
 
 #endif
