@@ -1,4 +1,4 @@
-# Cubed - 42 Project
+# Cub3D - 42 Project
 
 ![Cubed Logo](img/cubed.jpeg)
 
