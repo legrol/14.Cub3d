@@ -7,7 +7,7 @@
 ## Participantes
 
 - **rdel-olm** - [GitHub Profile](https://github.com/rdel-olm](https://github.com/legrol)
-- **drosales** - [GitHub Profile]([https://github.com/drosales](https://github.com/drosales96)
+- **drosales** - [GitHub Profile](https://github.com/drosales](https://github.com/drosales96)
 
 ---
 
