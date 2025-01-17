@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 20:18:20 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:59:34 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,7 @@ int		ft_verify_spaces(char **map);
 // Management errors
 // ============================================================================
 
+void	ft_forbidden_space(int line, int col);
 void	ft_invalid_char(char **map, int line, int pos);
 void	ft_invalid_side(int line, int warning);
 void	ft_manage_err(const char *err);
@@ -163,7 +164,6 @@ void	ft_manage_err(const char *err);
 // ============================================================================
 // Functions to release
 // ============================================================================
-
 
 // ============================================================================
 // Initialization functions
@@ -176,13 +176,9 @@ int		ft_setup(t_cub3d *structure);
 void	ft_init_walls(t_cub3d *structure, mlx_image_t **image);
 
 // ============================================================================
-// Peripherals
+// Utils functions
 // ============================================================================
 
-
-// ============================================================================
-// Several functions
-// ============================================================================
-
+int		ft_count_col(char **str);
 
 #endif

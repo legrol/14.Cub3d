@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:21:03 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 20:11:27 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:58:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,11 @@ void	ft_invalid_side(int line, int warning)
 		ft_printf(BDRED "Error: \n" RESET RED SIDE_RIGHT_ERR "\n" RESET);
 		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n" RESET, line + 1);
 	}
+}
+
+void	ft_forbidden_space(int line, int col)
+{
+	ft_printf(BDRED "Error: \n" RESET);
+	ft_printf(RED FORB_SPC_ERR RESET YELLOW FORB_SPC2_ERR RESET GREEN "%i" \
+	RESET YELLOW CHAR3_ERR RESET GREEN "%i.\n", line + 1, col + 1);
 }

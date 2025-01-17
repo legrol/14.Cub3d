@@ -51,7 +51,7 @@ LIBRARIES			= ./libs
 OBJ_DIR				= ./obj
 SRC_DIR				= ./src
 VERIFY_DIR			= ./verify
-# UTILS_DIR			= ./utils
+UTILS_DIR			= ./utils
 # PARSER_DIR			= ./parser
 LIBFT_DIR			= libft
 PRINTFT_DIR			= printf
@@ -98,7 +98,7 @@ ERR					= ${ERRORS_DIR}/ft_manage_err.c
 
 INT					= ${INIT_DIR}/ft_init_struct.c
 
-UTL					= ${UTILS_DIR}/xxxxx.c
+UTL					= ${UTILS_DIR}/ft_count_col.c
 
 CTRL				= ${CONTROL_DIR}/ft_control_args.c \
 						${CONTROL_DIR}/ft_ext_valid.c
