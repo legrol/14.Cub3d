@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/08/24 14:05:42 by rdel-olm          #+#    #+#             */
+/*   Updated: 2024/08/24 14:05:43 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "../../includes/libft.h"
 
-/**
- * 
- * 
- * 
- */
-
-int	ft_verify_map(t_cub3d *input)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	warning;
+	int	digit;
 
-	warning = 0;
-	if (!input || !input->map.map)
-		return (EXIT_FAILURE);
-	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
-		warning = 1;
-	if (warning == 1)
-		return (EXIT_FAILURE);
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+	}
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+		ft_putnbr_fd(n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 	else
-		return (EXIT_SUCCESS);
+	{
+		digit = (n + 48);
+		write(fd, &digit, 1);
+	}
 }

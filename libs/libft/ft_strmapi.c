@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/04/19 09:10:45 by rdel-olm          #+#    #+#             */
+/*   Updated: 2024/08/24 14:19:26 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "../../includes/libft.h"
 
-/**
- * 
- * 
- * 
- */
-
-int	ft_verify_map(t_cub3d *input)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	warning;
+	char			*str;
+	unsigned int	i;
+	int				totalchr;
 
-	warning = 0;
-	if (!input || !input->map.map)
-		return (EXIT_FAILURE);
-	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
-		warning = 1;
-	if (warning == 1)
-		return (EXIT_FAILURE);
-	else
-		return (EXIT_SUCCESS);
+	i = 0;
+	if (!s)
+		return (NULL);
+	totalchr = ft_strlen(s);
+	str = (char *) malloc((totalchr + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = 0;
+	return (str);
 }

@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/07/31 09:11:53 by rdel-olm          #+#    #+#             */
+/*   Updated: 2024/08/24 12:38:35 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "../../includes/examft.h"
 
 /**
  * 
+ * Assignment name  : ft_strlen
+ * Expected files   : ft_strlen.c
+ * Allowed functions:
+ * ---------------------------------------------------------------
  * 
+ * Write a function that returns the length of a string.
+ * 
+ * Your function must be declared as follows:
+ * 
+ * int	ft_strlen(char *str);
  * 
  */
 
-int	ft_verify_map(t_cub3d *input)
+size_t	ft_strlen(const char *str)
 {
-	int	warning;
+	size_t	i;
 
-	warning = 0;
-	if (!input || !input->map.map)
-		return (EXIT_FAILURE);
-	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
-		warning = 1;
-	if (warning == 1)
-		return (EXIT_FAILURE);
-	else
-		return (EXIT_SUCCESS);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

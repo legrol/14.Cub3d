@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/08/24 14:19:00 by rdel-olm          #+#    #+#             */
+/*   Updated: 2024/08/24 14:19:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "../../includes/libft.h"
 
-/**
- * 
- * 
- * 
- */
-
-int	ft_verify_map(t_cub3d *input)
+size_t	ft_strlen(const char *s)
 {
-	int	warning;
+	size_t	i;
 
-	warning = 0;
-	if (!input || !input->map.map)
-		return (EXIT_FAILURE);
-	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
-		warning = 1;
-	if (warning == 1)
-		return (EXIT_FAILURE);
-	else
-		return (EXIT_SUCCESS);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

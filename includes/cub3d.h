@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: drosales <drosales@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/15 19:55:32 by drosales         ###   ########.fr       */
+/*   Updated: 2025/01/17 16:50:43 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,6 +146,7 @@ int		ft_ext_valid(char *map_name);
 // Verify functions
 // ============================================================================
 
+int		ft_verify_core(char **map);
 int		ft_verify_extremes(t_cub3d *details, char **map);
 int		ft_verify_map(t_cub3d *input);
 
@@ -153,6 +154,8 @@ int		ft_verify_map(t_cub3d *input);
 // Management errors
 // ============================================================================
 
+void	ft_invalid_char(char **map, int line, int pos);
+void	ft_manage_err(const char *err);
 
 // ============================================================================
 // Functions to release

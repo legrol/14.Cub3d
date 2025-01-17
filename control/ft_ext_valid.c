@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ext_valid.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-15 16:19:33 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-01-15 16:19:33 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/01/15 16:19:33 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/01/17 13:00:15 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	ft_ext_valid(char *map_name)
 	size = ft_strlen(map_name);
 	if (size < 4)
 	{
-		ft_manage_err(BDRED INIT_ERR YELLOW SHORT_NAME_ERR RESET);
-		return (0);
+		ft_manage_err(SHORT_NAME_ERR);
+		return (EXIT_SUCCESS);
 	}
 	if ((ft_strncmp(map_name + size - 4, ".cub", 4) != 0))
 	{
-		ft_manage_err(BDRED INIT_ERR YELLOW EXT_ERR RESET);
-		return (0);
+		ft_manage_err(EXT_ERR);
+		return (EXIT_SUCCESS);
 	}
-	return (1);
+	return (EXIT_FAILURE);
 }

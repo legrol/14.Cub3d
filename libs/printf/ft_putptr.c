@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/05/06 06:26:37 by rdel-olm          #+#    #+#             */
+/*   Updated: 2024/08/24 12:52:01 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "../../includes/ft_printf.h"
 
-/**
- * 
- * 
- * 
- */
-
-int	ft_verify_map(t_cub3d *input)
+int	ft_putptr(uintptr_t	ptr)
 {
-	int	warning;
+	size_t	count;
 
-	warning = 0;
-	if (!input || !input->map.map)
-		return (EXIT_FAILURE);
-	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
-		warning = 1;
-	if (warning == 1)
-		return (EXIT_FAILURE);
-	else
-		return (EXIT_SUCCESS);
+	count = 0;
+	count += write(1, "0x", 2);
+	count += ft_puthex(ptr, 'x');
+	return (count);
 }
