@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 17:06:19 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 20:19:28 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int	ft_verify_map(t_cub3d *input)
 	if (!input || !input->map.map)
 		return (EXIT_FAILURE);
 	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
+	ft_verify_core(input->map.map) || ft_verify_closure(input) || \
+	ft_verify_spaces(input->map.map))
 		warning = 1;
 	if (warning == 1)
 		return (EXIT_FAILURE);

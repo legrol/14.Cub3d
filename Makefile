@@ -41,16 +41,17 @@ MK_					= && make
 # ══ Directories ═════════════════════════════════════════════════════════════ #
 #    -----------                                                               #
 
-SRC_DIR				= ./src
-ERRORS_DIR			= ./errors
 CONTROL_DIR			= ./control
+ERRORS_DIR			= ./errors
 IMAGES_DIR			= ./imgs
 # EXEC_DIR			= ./exec
 # FREE_DIR			= ./free
 INIT_DIR			= ./init
-UTILS_DIR			= ./utils
 LIBRARIES			= ./libs
 OBJ_DIR				= ./obj
+SRC_DIR				= ./src
+VERIFY_DIR			= ./verify
+# UTILS_DIR			= ./utils
 # PARSER_DIR			= ./parser
 LIBFT_DIR			= libft
 PRINTFT_DIR			= printf
@@ -95,12 +96,17 @@ GNL					= ${LIBRARIES}/${GNL_DIR}/get_next_line.c \
 
 ERR					= ${ERRORS_DIR}/ft_manage_err.c
 
-INT					= ${INIT_DIR}/xxxx.c
+INT					= ${INIT_DIR}/ft_init_struct.c
 
 UTL					= ${UTILS_DIR}/xxxxx.c
 
 CTRL				= ${CONTROL_DIR}/ft_control_args.c \
 						${CONTROL_DIR}/ft_ext_valid.c
+
+VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
+						${VERIFY_DIR}/ft_verify_lines.c \
+						${VERIFY_DIR}/ft_verify_maps.c \
+						${VERIFY_DIR}/ft_verify_spaces.c
 
 # FRE					= ${FREE_DIR}/xxxx.c
 
@@ -115,6 +121,7 @@ OBJ_ERR				= $(patsubst ${ERRORS_DIR}/%.c, ${OBJ_DIR}/%.o, ${ERR})
 OBJ_INT				= $(patsubst ${INIT_DIR}/%.c, ${OBJ_DIR}/%.o, ${INT})
 OBJ_UTL				= $(patsubst ${UTILS_DIR}/%.c, ${OBJ_DIR}/%.o, ${UTL})
 OBJ_CTRL			= $(patsubst ${CONTROL_DIR}/%.c, ${OBJ_DIR}/%.o, ${CTRL})
+OBJ_VRF				= $(patsubst ${VERIFY_DIR}/%.c, ${OBJ_DIR}/%.o, ${VRF})
 # OBJ_FRE				= $(patsubst ${FREE_DIR}/%.c, ${OBJ_DIR}/%.o, ${FRE})
 # OBJ_PAR				= $(patsubst ${PARSER_DIR}/%.c, ${OBJ_DIR}/%.o, ${PAR})
 # OBJ_EXE				= $(patsubst ${EXEC_DIR}/%.c, ${OBJ_DIR}/%.o, ${EXE})
@@ -126,11 +133,12 @@ all: ${NAME}
 
 ${NAME}: ftlibft ftprintf ftexamft  ${OBJ_SRC} ${OBJ_GNL} \
 									${OBJ_ERR} ${OBJ_INT} ${OBJ_UTL} \
-									${OBJ_CTRL} ${OBJ_FRE} ${OBJ_PAR}
+									${OBJ_CTRL} ${OBJ_VRF} ${OBJ_FRE} \
+									${OBJ_PAR}
 	@echo "$(YELLOW)Compiling root ...$(DEF_COLOR)"
 	@${CC} ${CFLAGS} ${IFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_GNL} ${OBJ_ERR} \
 									${OBJ_INT} ${OBJ_UTL} ${OBJ_FRE} \
-									${OBJ_CTRL} ${OBJ_PAR} ${LFLAGS}
+									${OBJ_CTRL} ${OBJ_VRF} ${OBJ_PAR} ${LFLAGS}
 	@echo "$(GREEN) $(NAME) all created ✓$(DEF_COLOR)"
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
@@ -154,6 +162,10 @@ ${OBJ_DIR}/%.o: ${UTILS_DIR}/%.c
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
 ${OBJ_DIR}/%.o: ${CONTROL_DIR}/%.c
+	@${MKD} $(dir $@)
+	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
+
+${OBJ_DIR}/%.o: ${VERIFY_DIR}/%.c
 	@${MKD} $(dir $@)
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 

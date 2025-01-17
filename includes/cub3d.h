@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 16:50:43 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 20:18:20 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,15 +146,18 @@ int		ft_ext_valid(char *map_name);
 // Verify functions
 // ============================================================================
 
+int		ft_verify_closure(t_cub3d *details);
 int		ft_verify_core(char **map);
 int		ft_verify_extremes(t_cub3d *details, char **map);
 int		ft_verify_map(t_cub3d *input);
+int		ft_verify_spaces(char **map);
 
 // ============================================================================
 // Management errors
 // ============================================================================
 
 void	ft_invalid_char(char **map, int line, int pos);
+void	ft_invalid_side(int line, int warning);
 void	ft_manage_err(const char *err);
 
 // ============================================================================
@@ -166,11 +169,11 @@ void	ft_manage_err(const char *err);
 // Initialization functions
 // ============================================================================
 
-void    ft_init_coord_flags(t_cub3d *structure);
-void    ft_init_player(t_cub3d *structure);
-void    ft_init_textures(t_cub3d *structure);
-int 	ft_setup(t_cub3d *structure);
-void    ft_init_walls(t_cub3d *structure, mlx_image_t **image);
+void	ft_init_coord_flags(t_cub3d *structure);
+void	ft_init_player(t_cub3d *structure);
+void	ft_init_textures(t_cub3d *structure);
+int		ft_setup(t_cub3d *structure);
+void	ft_init_walls(t_cub3d *structure, mlx_image_t **image);
 
 // ============================================================================
 // Peripherals

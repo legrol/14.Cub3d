@@ -6,13 +6,26 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:21:03 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 17:08:42 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 20:11:27 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
 /**
+ * The function "ft_invalid_side" logs an error message when an issue is 
+ * detected with the left or right side of a map line. It provides a detailed 
+ * description of the error, specifying the side (left or right) and the line 
+ * number where the problem occurred.
+ * 
+ * @param int line					The line index in the map where the error 
+ * 									was detected.
+ * @param int warning				A flag indicating the type of error:
+ * 										1 for an issue on the left side.
+ * 										2 for an issue on the right side.
+ * 
+ * @return void
+ * 
  * The function "ft_invalid_char" logs detailed information about an invalid 
  * character detected in the map. It specifies the invalid character, its 
  * line number, and its position within the line, helping with debugging.
@@ -54,4 +67,18 @@ void	ft_invalid_char(char **map, int line, int pos)
 	letter);
 	ft_printf(YELLOW CHAR2_ERR RESET RED "%i" RESET YELLOW CHAR3_ERR RESET \
 	RED "%i" RESET YELLOW "." RESET, line + 1, pos + 1);
+}
+
+void	ft_invalid_side(int line, int warning)
+{
+	if (warning == 1)
+	{
+		ft_printf(BDRED "Error: \n" RESET RED SIDE_LEFT_ERR "\n" RESET);
+		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n" RESET, line + 1);
+	}
+	if (warning == 2)
+	{
+		ft_printf(BDRED "Error: \n" RESET RED SIDE_RIGHT_ERR "\n" RESET);
+		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n" RESET, line + 1);
+	}
 }

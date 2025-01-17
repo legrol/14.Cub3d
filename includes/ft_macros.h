@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 16:55:01 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 20:01:23 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@
 # define CHAR1_ERR				"❌ⓒⓗⓐⓡ Wrong character "
 # define CHAR2_ERR				"... at map line "
 # define CHAR3_ERR				" in the position "
+# define SIDE_LEFT_ERR			"❗Map left side isn't closed properly."
+# define SIDE_RIGHT_ERR			"❗Map right side isn't closed properly."
+# define LINE_ERR				"Error at line: "
 
 // ======== Pdtes de incorporar a codigo  =====================================
 # define OPEN_ERR				"📖 Error opening source file!!!"
