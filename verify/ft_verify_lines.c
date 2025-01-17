@@ -6,16 +6,62 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:02:49 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 13:46:32 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 17:05:09 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-/****
+/**
+ * The function "ft_verify_extremes" checks the first and last lines of the map 
+ * to ensure they contain only valid boundary characters ('1' or space). It 
+ * logs errors for any invalid lines and sets a failure flag.
  * 
+ * @param t_cub3d *details			A structure containing map details and 
+ * 									metadata.
+ * @param char **map				A 2D array representing the map to verify.
  * 
+ * @return int						Returns EXIT_SUCCESS if the extremes are 
+ * 									valid, or EXIT_FAILURE otherwise.
  * 
+ * The function "ft_verify_first_line" checks if the first line of the map 
+ * contains only valid boundary characters ('1' or space). If any other 
+ * character is found, it logs the error and returns EXIT_FAILURE.
+ * 
+ * @param char **map				A 2D array representing the map to verify.
+ * 
+ * @return int						Returns EXIT_SUCCESS if the first line is 
+ * 									valid, or EXIT_FAILURE otherwise.
+ * 
+ * The function "ft_verify_last_line" checks if the last line of the map 
+ * contains only valid boundary characters ('1' or space). If any other 
+ * character is found, it logs the error and returns EXIT_FAILURE.
+ * 
+ * @param char **map				A 2D array representing the map to verify.
+ * @param int end					The index of the last line of the map.
+ * 
+ * @return int						Returns EXIT_SUCCESS if the last line is 
+ * 									valid, or EXIT_FAILURE otherwise.
+ * 
+ * The function "ft_verify_core" validates all characters within the map. 
+ * It iterates through each row and column, calling "ft_verify_chars" to 
+ * check the validity of each character. If an invalid character is found, 
+ * it logs the error and sets the output flag.
+ * 
+ * @param char **map				A 2D array representing the map to verify.
+ * 
+ * @return int						Returns EXIT_SUCCESS if all characters are 
+ * 									valid, or EXIT_FAILURE if any invalid 
+ * 									character is found.
+ * 
+ * The function "ft_verify_chars" checks if a given character is valid within 
+ * the context of the map. Valid characters are 'N', 'S', 'E', 'W', newline, 
+ * space, and the digits '0' and '1'.
+ * 
+ * @param char c					The character to verify.
+ * 
+ * @return int						Returns EXIT_SUCCESS if the character is 
+ * 									valid, or EXIT_FAILURE otherwise.
  * 
  */
 

@@ -6,15 +6,24 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/17 17:06:19 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
 /**
+ * The function "ft_verify_map" validates the entire map structure within the 
+ * `t_cub3d` input. It checks for the existence of the map, validates its 
+ * boundary lines (first and last), and ensures that all characters in the 
+ * map are valid.
  * 
+ * @param t_cub3d *input			A pointer to the main structure containing 
+ * 									map details and metadata.
  * 
+ * @return int						Returns EXIT_SUCCESS if the map is valid. 
+ * 									Returns EXIT_FAILURE if any validation 
+ * 									fails.
  * 
  */
 
