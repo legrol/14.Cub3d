@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_verify_maps.c                                   :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:12:45 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 00:45:30 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/04/19 09:18:26 by rdel-olm          #+#    #+#             */
+/*   Updated: 2024/08/24 14:18:09 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "../../includes/libft.h"
 
-/**
- * 
- * 
- * 
- */
-
-int	ft_verify_map(t_cub3d *input)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	warning;
+	unsigned int	i;
 
-	warning = 0;
-	if (!input || !input->map.map)
-		return (EXIT_FAILURE);
-	if (ft_verify_extremes(input, input->map.map) || \
-	ft_verify_core(input->map.map))
-		warning = 1;
-	if (warning == 1)
-		return (EXIT_FAILURE);
-	else
-		return (EXIT_SUCCESS);
+	i = 0;
+	if (!s)
+		return ;
+	while (*s)
+	{
+		f(i, s);
+		i++;
+		s++;
+	}
 }
