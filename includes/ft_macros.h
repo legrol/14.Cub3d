@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 22:57:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/18 19:07:21 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@
 # define LINE_ERR				"Error at line: "
 # define FORB_SPC_ERR			"❗Forbidden space "
 # define FORB_SPC2_ERR			"on the line "
+# define PLAYERS_0_ERR			"❗No player on the map. There must be one."
+# define PLAYERS_NO1_ERR		"❗Too many players on the map. There must be \
+								one."
 
 // ======== Pdtes de incorporar a codigo  =====================================
 # define OPEN_ERR				"📖 Error opening source file!!!"

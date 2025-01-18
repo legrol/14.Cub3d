@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 22:59:34 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/18 19:46:50 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,6 +146,7 @@ int		ft_ext_valid(char *map_name);
 // Verify functions
 // ============================================================================
 
+int		ft_number_players(char **map);
 int		ft_verify_closure(t_cub3d *details);
 int		ft_verify_core(char **map);
 int		ft_verify_extremes(t_cub3d *details, char **map);
@@ -160,6 +161,7 @@ void	ft_forbidden_space(int line, int col);
 void	ft_invalid_char(char **map, int line, int pos);
 void	ft_invalid_side(int line, int warning);
 void	ft_manage_err(const char *err);
+void	ft_players(int index);
 
 // ============================================================================
 // Functions to release

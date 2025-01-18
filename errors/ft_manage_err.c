@@ -6,13 +6,33 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:21:03 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 22:58:54 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/18 19:46:03 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
 /**
+ * The function "ft_players" validates the number of players in the map. It 
+ * ensures that there is exactly one player ('N', 'S', 'E', or 'W') in the map 
+ * and prints appropriate error messages if this condition is violated.
+ * 
+ * @param int index					The number of players detected in the map.
+ * 									Expected to be exactly 1 for a valid map.
+ * 
+ * @return void
+ * 
+ * The function "ft_forbidden_space" logs an error message when a forbidden 
+ * space is detected at a specific position in the map. It prints the line 
+ * and column number of the invalid space to help with debugging.
+ * 
+ * @param int line					The line index in the map where the 
+ * 									forbidden space was found (0-based index).
+ * @param int col					The column index in the map where the 
+ * 									forbidden space was found (0-based index).
+ * 
+ * @return void
+ * 
  * The function "ft_invalid_side" logs an error message when an issue is 
  * detected with the left or right side of a map line. It provides a detailed 
  * description of the error, specifying the side (left or right) and the line 
@@ -88,4 +108,12 @@ void	ft_forbidden_space(int line, int col)
 	ft_printf(BDRED "Error: \n" RESET);
 	ft_printf(RED FORB_SPC_ERR RESET YELLOW FORB_SPC2_ERR RESET GREEN "%i" \
 	RESET YELLOW CHAR3_ERR RESET GREEN "%i.\n", line + 1, col + 1);
+}
+
+void	ft_players(int index)
+{
+	if (index == 0)
+		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_0_ERR RESET);
+	if (index > 1)
+		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_NO1_ERR RESET);
 }

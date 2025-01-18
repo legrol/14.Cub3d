@@ -106,6 +106,7 @@ CTRL				= ${CONTROL_DIR}/ft_control_args.c \
 VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
 						${VERIFY_DIR}/ft_verify_lines.c \
 						${VERIFY_DIR}/ft_verify_maps.c \
+						${VERIFY_DIR}/ft_verify_players.c \
 						${VERIFY_DIR}/ft_verify_spaces.c
 
 # FRE					= ${FREE_DIR}/xxxx.c
