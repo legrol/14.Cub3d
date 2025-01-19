@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/18 19:07:21 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:29:25 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@
 								one."
 # define SHORT_NAME_ERR			"🗺️ Map name is very short!!!"
 # define EXT_ERR				"❌ⓔⓧⓣ File extension error!!!"
-# define FLOOR_OR_SKY_ERR		"42Cub3D: Error rendering the ground or the \
+# define FLOOR_OR_SKY_ERR		"❗Error rendering the ground or the \
 								sky."
-# define IMG_TO_WINDOW_ERR		"42Cub3D: Error in function while rendering \
+# define IMG_TO_WINDOW_ERR		"❗Error in function while rendering \
 								process."
 # define INV_CHAR_ERR			"❗Invalid character in first line."
 # define INV_CHAR2_ERR			"❗Invalid character in last line."
@@ -51,10 +51,12 @@
 # define PLAYERS_0_ERR			"❗No player on the map. There must be one."
 # define PLAYERS_NO1_ERR		"❗Too many players on the map. There must be \
 								one."
-
-// ======== Pdtes de incorporar a codigo  =====================================
 # define OPEN_ERR				"📖 Error opening source file!!!"
 # define CLOSED_ERR				"📚 Error closing source file!!!"
+# define OPEN_MAP_ERR			"🗺️ Error opening map."
+
+// ======== Pdtes de incorporar a codigo  =====================================
+
 # define MALLOC_ERR				"❌Ⓜⓐⓛⓛⓞⓒ Error creating malloc!!!"
 # define MLX_ERR 				"4️⃣2️⃣📈📉 Error connecting to graphics server \
 								MLX42!!!"

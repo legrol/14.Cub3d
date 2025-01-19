@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3D.c                                            :+:      :+:    :+:   */
+/*   ft_analyzer.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 16:24:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 00:13:11 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/01/18 23:24:40 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/01/19 01:22:20 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,22 @@
  * 
  */
 
-int	main(int argc, char **argv)
+int	ft_analyzer(char *argv, t_cub3d *cub)
 {
-	t_cub3d	cub;
-	// t_map	*map;
+	int	fd;
+	int	warning;
 
-	if (ft_control_args(argc, argv))
-		return (EXIT_FAILURE);
-	ft_setup(&cub);
-	if (ft_verify_map(&cub))
-		return (EXIT_FAILURE);
-	if (ft_analyzer(argv[1], &cub))
-	{
-
-
-	}
-
-	//parser
-
-	// cub = ft_init(argv[1]); // pdte desarrollar
-	// map = ft_init_map(argv[1]); // pdte desarrollar
-
-
-	return (EXIT_SUCCESS);
+	warning = 0;
+	// if (xxxxx)
+	// 	return (EXIT_FAILURE);
+	cub->file = argv;
+	fd = open(argv, O_RDONLY);
+	if (fd < 0)
+		return (ft_manage_err(OPEN_ERR), EXIT_FAILURE);
+	if (ft_get_textures_data(cub, &warning, &fd) || xxxxx)
+		warning = 1;
+	close(fd);
+	//get size map
+	return (warning);
 }
+

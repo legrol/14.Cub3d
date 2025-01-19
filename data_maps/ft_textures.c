@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3D.c                                            :+:      :+:    :+:   */
+/*   ft_textures.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 16:24:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 00:13:11 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/01/19 01:10:32 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/01/19 21:30:49 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,26 @@
  * 
  */
 
-int	main(int argc, char **argv)
+static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
 {
-	t_cub3d	cub;
-	// t_map	*map;
 
-	if (ft_control_args(argc, argv))
-		return (EXIT_FAILURE);
-	ft_setup(&cub);
-	if (ft_verify_map(&cub))
-		return (EXIT_FAILURE);
-	if (ft_analyzer(argv[1], &cub))
+
+
+
+}
+
+int	ft_get_textures_data(t_cub3d *cub, int *flag, int *fd)
+{
+	if (*fd < 0)
 	{
-
-
+		ft_manage_err(OPEN_MAP_ERR);
+		*flag = 1;
+		return (*flag);
 	}
-
-	//parser
-
-	// cub = ft_init(argv[1]); // pdte desarrollar
-	// map = ft_init_map(argv[1]); // pdte desarrollar
-
-
+	if (ft_get_walls_data(cub, flag, fd))
+	{
+		*flag = 1;
+		return (EXIT_FAILURE);
+	}
 	return (EXIT_SUCCESS);
 }
