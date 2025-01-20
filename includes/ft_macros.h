@@ -56,7 +56,11 @@
 # define OPEN_MAP_ERR			"🗺️ Error opening map."
 # define READ_ERR				"❗Error reading line with GNL."
 # define SPLIT_ERR				"❗Error in function ft_split."
-
+# define MATRIX_TO_STR_ERR		"❗Error in function ft_matrix_to_str"
+# define FT_STRTRIM_ERR			"❗Error in function ft_strtrim"
+# define FT_SPLIT_ERR			"❗Error in ft_map_spliting with ft_split!"
+# define MAP_ERR				"❗Error, map is missing!"
+# define EXTRA_LINE_ERR			"❗Error, extra line in the map!"
 // ======== Pdtes de incorporar a codigo  =====================================
 
 # define MALLOC_ERR				"❌Ⓜⓐⓛⓛⓞⓒ Error creating malloc!!!"

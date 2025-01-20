@@ -140,6 +140,10 @@ typedef struct s_textures
 // ============================================================================
 
 int		ft_analyzer(char *argv, t_cub3d *cub);
+int		ft_mapping(t_cub3d *cub, int fd);
+int		ft_checking_lines(char	*map);
+char	*ft_matrix_to_str(char	*c, int fd);
+int 	ft_map_spliting(t_cub3d *cub, char *map);
 
 // ============================================================================
 // Control functions
@@ -177,6 +181,8 @@ void	ft_init_walls(t_cub3d *structure, mlx_image_t **image);
 
 int		ft_count_col(char **str);
 int		ft_split_line(char ***cell, int fd);
+char	*ft_new_strjoin(char const *s1, char const *s2);
+int 	ft_split_len(char **str);
 
 // ============================================================================
 // Verify functions

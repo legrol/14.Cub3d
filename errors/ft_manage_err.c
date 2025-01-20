@@ -56,7 +56,7 @@
  * 									invalid character was found.
  * @param int pos					The column index in the line where the 
  * 									invalid character was found.
- * 
+ *
  * @return void
  * 
  * The function "ft_manage_err" handles the detection of errors by printing 
