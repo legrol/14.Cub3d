@@ -54,6 +54,8 @@
 # define OPEN_ERR				"📖 Error opening source file!!!"
 # define CLOSED_ERR				"📚 Error closing source file!!!"
 # define OPEN_MAP_ERR			"🗺️ Error opening map."
+# define READ_ERR				"❗Error reading line with GNL."
+# define SPLIT_ERR				"❗Error in function ft_split."
 
 // ======== Pdtes de incorporar a codigo  =====================================
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_textures.c                                      :+:      :+:    :+:   */
+/*   ft_gadget.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/19 01:10:32 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 21:30:49 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025-01-20 08:03:54 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025-01-20 08:03:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,24 @@
  * 
  */
 
-static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
+int	ft_split_line(char ***cell, int fd)
 {
-	char	*cell;
-	int		i;
-	int		j;
+	char	*row;
 
-	cell = NULL;
-	i = 0;
-	j = 0;
-	while (xxxx)
+	row = get_next_line(fd);
+	if (!row)
 	{
-
-
-	}
-	xxx;
-	return (EXIT_SUCCESS);
-}
-
-int	ft_get_textures_data(t_cub3d *cub, int *flag, int *fd)
-{
-	if (*fd < 0)
-	{
-		ft_manage_err(OPEN_MAP_ERR);
-		*flag = 1;
-		return (*flag);
-	}
-	if (ft_get_walls_data(cub, flag, fd))
-	{
-		*flag = 1;
+		ft_manage_err(READ_ERR);
 		return (EXIT_FAILURE);
 	}
+	row = XXX;
+	*cell = ft_split(XXX);
+	if (!cell)
+	{
+		ft_manage_err(SPLIT_ERR);
+		free(row);
+		return (EXIT_FAILURE);
+	}
+	free(row);
 	return (EXIT_SUCCESS);
 }

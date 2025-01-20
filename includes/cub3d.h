@@ -176,6 +176,7 @@ void	ft_init_walls(t_cub3d *structure, mlx_image_t **image);
 // ============================================================================
 
 int		ft_count_col(char **str);
+int		ft_split_line(char ***cell, int fd);
 
 // ============================================================================
 // Verify functions
