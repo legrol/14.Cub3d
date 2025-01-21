@@ -108,7 +108,8 @@ VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
 
 # FRE					= ${FREE_DIR}/xxxx.c
 
-ANZ					= ${ANALYZ_DIR}/ft_analyzer.c
+ANZ					= ${ANALYZ_DIR}/ft_analyzer.c\
+									ft_analyzer_utils.c
 
 # EXE					= ${EXEC_DIR}/xxxx.c
 
