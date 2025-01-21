@@ -39,16 +39,16 @@ int	ft_analyzer(char *argv, t_cub3d *cub)
 	int	warning;
 
 	warning = 0;
-	// if (xxxxx)
-	// 	return (EXIT_FAILURE);
 	cub->file = argv;
+	if (ft_ext_valid(cub->file) == EXIT_FAILURE)
+		return (ft_manage_err(EXT_ERR), EXIT_FAILURE);
 	fd = open(argv, O_RDONLY);
 	if (fd < 0)
 		return (ft_manage_err(OPEN_ERR), EXIT_FAILURE);
-	if (ft_get_textures_data(cub, &warning, &fd) || ft_mapping())
+	if (ft_get_textures_data(cub, &warning, &fd) || ft_mapping(cub, fd))
 		warning = 1;
 	close(fd);
-	//get size map
+	ft_map_dimensions(&cub->map);
 	return (warning);
 }
 

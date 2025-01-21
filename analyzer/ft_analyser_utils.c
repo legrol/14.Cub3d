@@ -68,3 +68,24 @@ int ft_map_spliting(t_cub3d *cub, char *map)
     cub->map.line_map = ft_split_len(cub->map.map);
     return (EXIT_SUCCESS);
 }
+
+void	ft_map_dimensions(t_map *map)
+{
+	int	i;
+	int	j;
+	int	len;
+
+	if (!map->map || !map->map[0])
+		return;
+	i = 0;
+	j = 0;
+	while (map->map[i])
+	{
+		len = ft_strlen(map->map[i]);
+		if (len > j)
+			j = len;
+		i++;
+	}
+	map->x_map = j;
+	map->y_map = i;
+}

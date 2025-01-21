@@ -57,7 +57,6 @@ ANALYZ_DIR			= ./analyzer
 LIBFT_DIR			= libft
 PRINTFT_DIR			= printf
 EXAMFT_DIR			= examft
-GNL_DIR				= gnl
 INCLUDES_DIR		= ./includes
 
 # ══ Directories Bonus ═══════════════════════════════════════════════════════ #
@@ -90,11 +89,6 @@ LFLAGS				= -L${LIBRARIES}/${LIBFT_DIR} -lft \
 
 SRC 				= ${SRC_DIR}/cub3D.c
 
-GNL					= ${LIBRARIES}/${GNL_DIR}/get_next_line.c \
-						${LIBRARIES}/${GNL_DIR}/get_next_line_utils.c \
-						${LIBRARIES}/${GNL_DIR}/get_next_line_bonus.c \
-						${LIBRARIES}/${GNL_DIR}/get_next_line_utils_bonus.c
-
 DMP					= ${DATAMAPS_DIR}/ft_textures.c
 
 ERR					= ${ERRORS_DIR}/ft_manage_err.c
@@ -119,8 +113,6 @@ ANZ					= ${ANALYZ_DIR}/ft_analyzer.c
 # EXE					= ${EXEC_DIR}/xxxx.c
 
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, ${SRC})
-OBJ_GNL				= $(patsubst ${LIBRARIES}/${GNL_DIR}/%.c, ${OBJ_DIR}/%.o, \
-						${GNL})
 OBJ_DMP				= $(patsubst ${DATAMAPS_DIR}/%.c, ${OBJ_DIR}/%.o, ${DMP})
 OBJ_ERR				= $(patsubst ${ERRORS_DIR}/%.c, ${OBJ_DIR}/%.o, ${ERR})
 OBJ_INT				= $(patsubst ${INIT_DIR}/%.c, ${OBJ_DIR}/%.o, ${INT})
@@ -136,12 +128,12 @@ OBJ_ANZ				= $(patsubst ${ANALYZ_DIR}/%.c, ${OBJ_DIR}/%.o, ${ANZ})
 
 all: ${NAME}
 
-${NAME}: ftlibft ftprintf ftexamft  ${OBJ_SRC} ${OBJ_GNL} \
+${NAME}: ftlibft ftprintf ftexamft  ${OBJ_SRC}  \
 									${OBJ_ERR} ${OBJ_INT} ${OBJ_UTL} \
 									${OBJ_CTRL} ${OBJ_VRF} ${OBJ_FRE} \
 									${OBJ_ANZ} ${OBJ_DMP}
 	@echo "$(YELLOW)Compiling root ...$(DEF_COLOR)"
-	@${CC} ${CFLAGS} ${IFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_GNL} ${OBJ_ERR} \
+	@${CC} ${CFLAGS} ${IFLAGS} -o ${NAME} ${OBJ_SRC} ${OBJ_ERR} \
 									${OBJ_INT} ${OBJ_UTL} ${OBJ_FRE} \
 									${OBJ_CTRL} ${OBJ_VRF} ${OBJ_ANZ} \
 									${OBJ_DMP} ${LFLAGS}
@@ -151,9 +143,9 @@ ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
 	@${MKD} $(dir $@)
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
-${OBJ_DIR}/%.o: ${LIBRARIES}/${GNL_DIR}/%.c
-	@${MKD} $(dir $@)
-	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
+#${OBJ_DIR}/%.o: ${LIBRARIES}/${GNL_DIR}/%.c
+#	@${MKD} $(dir $@)
+#	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
 ${OBJ_DIR}/%.o: ${DATAMAPS_DIR}/%.c
 	@${MKD} $(dir $@)

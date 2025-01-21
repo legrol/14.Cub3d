@@ -144,6 +144,7 @@ int		ft_mapping(t_cub3d *cub, int fd);
 int		ft_checking_lines(char	*map);
 char	*ft_matrix_to_str(char	*c, int fd);
 int 	ft_map_spliting(t_cub3d *cub, char *map);
+void	ft_map_dimensions(t_map *map);
 
 // ============================================================================
 // Control functions

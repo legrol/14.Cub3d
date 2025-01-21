@@ -13,8 +13,20 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <ctype.h>
+# include <stddef.h>
+# include <unistd.h>
 # include <stdlib.h>
-# include <unistd.h> 
+# include <stddef.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <string.h>
+# include <limits.h>
+# include <sys/types.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 /** Structure to represent a node of my list. Their members are:
 *     • content: the information contained by the node.
@@ -31,6 +43,7 @@ typedef struct s_list
 // ============================================================================
 // Functions of libc
 // ============================================================================
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -57,12 +70,14 @@ int		ft_atoi(const char *str);
 // ============================================================================
 // Functions malloc
 // ============================================================================
+
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
 
 // ============================================================================
 // Functions additionals
 // ============================================================================
+
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -79,6 +94,7 @@ char	**ft_split_m(char const *s, char c);
 // ============================================================================
 // Functions to lists
 // ============================================================================
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -88,5 +104,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// ============================================================================
+// New GNL for Cub3D
+// ============================================================================
+
+char	*ft_rline(char *line);
+size_t	ft_gnl_len(char *str);
+char	ft_gnl_strchr(char	*str, int c);
+char	*ft_gnlstrjoin(char *str1, char *str2);
+char	*ft_alloc(int fd, char *str);
+char	*ft_nline(char *str);
+char	*get_next_line(int fd);
 
 #endif

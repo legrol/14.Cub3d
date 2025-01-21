@@ -167,7 +167,7 @@ Flujo de la Función:
     Usa ft_split() para dividir la cadena del mapa en un arreglo de cadenas (una por cada línea).
     Almacena el número de líneas en la estructura cub->map.line_map utilizando ft_split_len().
 
-6. Función ft_split_len
+## 6. Función ft_split_len
 
 ```c
 int ft_split_len(char **str)
@@ -182,12 +182,46 @@ int ft_split_len(char **str)
     return (i);
 }
 ```
+
 ### Propósito:
 
 Cuenta el número de líneas en un arreglo de cadenas generado por ft_split().
 Flujo de la Función:
 
     Recorre el arreglo de cadenas y cuenta cuántas cadenas existen.
+
+
+## 7. Función ft_map_dimensions
+
+```c
+void	ft_map_dimensions(t_map *map)
+{
+	int	i;
+	int	j;
+	int	len;
+
+	if (!map->map || !map->map[0])
+		return;
+	i = 0;
+	j = 0;
+	while (map->map[i])
+	{
+		len = ft_strlen(map->map[i]);
+		if (len > j)
+			j = len;
+		i++;
+	}
+	map->x_map = j;
+	map->y_map = i;
+}
+```
+
+### Propósito
+
+El propósito de ft_get_size_map es calcular las dimensiones de un mapa almacenado como un array de cadenas (arreglo de filas). El mapa tiene:
+
+    map_size_x: El ancho del mapa, que es la longitud de la fila más larga.
+    map_size_y: El alto del mapa, que es la cantidad de filas.
 
 ## Resumen del Flujo:
 
@@ -198,5 +232,6 @@ Flujo de la Función:
     ft_new_strjoin concatena las cadenas de manera segura.
     ft_map_spliting divide el mapa en líneas y almacena el resultado.
     ft_split_len cuenta las líneas del mapa.
+    ft_map_dimensions recorre todas las filas del mapa, calcula la fila más larga y cuenta cuántas filas hay. Es una forma simple y efectiva de determinar las dimensiones de un mapa bidimensional. 
 
 Este flujo asegura que el mapa se cargue, se verifique y se divida correctamente para su uso en el programa, garantizando que no haya líneas vacías o errores de formato en los datos del mapa.
