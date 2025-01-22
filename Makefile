@@ -93,7 +93,8 @@ DMP					= ${DATAMAPS_DIR}/ft_textures.c
 
 ERR					= ${ERRORS_DIR}/ft_manage_err.c
 
-INT					= ${INIT_DIR}/ft_init_struct.c
+INT					= ${INIT_DIR}/ft_init_struct.c\
+									ft_game_init.c
 
 UTL					= ${UTILS_DIR}/ft_count_col.c
 
