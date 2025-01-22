@@ -175,6 +175,8 @@ void	ft_players(int index);
 
 int		ft_setup(t_cub3d *structure);
 void	ft_init_walls(t_cub3d *structure, mlx_image_t **image);
+void    ft_game_init(t_cub3d *cub);
+void    ft_playing_mode(t_cub3d *cub);
 
 // ============================================================================
 // Utils functions

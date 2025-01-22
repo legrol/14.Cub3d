@@ -63,6 +63,7 @@
 # define EXTRA_LINE_ERR			"❗Error, extra line in the map!"
 // ======== Pdtes de incorporar a codigo  =====================================
 
+# define MLX_INIT_ERR			"❗Error, something is wrong with mlx_init()"
 # define MALLOC_ERR				"❌Ⓜⓐⓛⓛⓞⓒ Error creating malloc!!!"
 # define MLX_ERR 				"4️⃣2️⃣📈📉 Error connecting to graphics server \
 								MLX42!!!"
