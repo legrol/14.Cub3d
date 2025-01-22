@@ -1,6 +1,6 @@
 # Estructura General de la Función
 
-Tu implementación de get_next_line se basa en la lectura de un archivo línea por línea. El propósito de esta función es manejar eficientemente la lectura de archivos, como los mapas en proyectos de juegos, procesando cada línea individualmente a medida que es solicitada.
+Esta implementación de get_next_line se basa en la lectura de un archivo línea por línea. El propósito de esta función es manejar eficientemente la lectura de archivos, como los mapas en proyectos de juegos, procesando cada línea individualmente a medida que es solicitada.
 Explicación Detallada de las Funciones
 
 1. ft_gnl_len (longitud de una cadena)
