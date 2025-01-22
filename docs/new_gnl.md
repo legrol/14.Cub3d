@@ -8,8 +8,10 @@ Explicación Detallada de las Funciones
 size_t ft_gnl_len(char *str)
 {
     size_t i = 0;
-    if (!str) return 0;
-    while (str[i] != '\0') i++;
+    if (!str) 
+        return 0;
+    while (str[i] != '\0') 
+        i++;
     return i;
 }
 ```
@@ -21,10 +23,14 @@ size_t ft_gnl_len(char *str)
 char ft_gnl_strchr(char *str, int c)
 {
     size_t i = 0;
-    if (!str) return 0;
-    if (c == '\0') return ((char *)&str[ft_gnl_len(str)]);
-    while (str[i]) {
-        if (str[i] == (char)c) return ((char *)&str[i]);
+    if (!str) 
+        return 0;
+    if (c == '\0') 
+        return ((char *)&str[ft_gnl_len(str)]);
+    while (str[i]) 
+    {
+        if (str[i] == (char)c) 
+            return ((char *)&str[i]);
         i++;
     }
     return 0;
@@ -39,16 +45,21 @@ char *ft_gnlstrjoin(char *str1, char *str2)
 {
     size_t i = 0, j = 0;
     char *end;
-    if (!str1) {
+    if (!str1) 
+    {
         str1 = (char *)malloc(sizeof(char) * 1);
         str1[0] = '\0';
     }
-    if (!str2) return NULL;
+    if (!str2) 
+        return NULL;
     end = (char *)malloc(sizeof(char) * (ft_len(str1) + ft_len(str2) + 1));
-    if (end == NULL) return NULL;
-    while (str1[i]) end[j++] = str1[i++];
+    if (end == NULL) 
+        return NULL;
+    while (str1[i]) 
+        end[j++] = str1[i++];
     i = 0;
-    while (str2[i]) end[j++] = str2[i++];
+    while (str2[i]) 
+        end[j++] = str2[i++];
     end[j] = '\0';
     free(str1);
     return end;
@@ -66,11 +77,14 @@ char *ft_alloc(int fd, char *str)
     ssize_t len;
 
     buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-    if (!buff) return NULL;
+    if (!buff) 
+        return NULL;
     len = 1;
-    while (!(ft_gnlstrchr(str, '\n')) && len > 0) {
+    while (!(ft_gnlstrchr(str, '\n')) && len > 0) 
+    {
         len = read(fd, buff, BUFFER_SIZE);
-        if (len == -1) {
+        if (len == -1) 
+        {
             free(buff);
             return NULL;
         }
@@ -91,16 +105,21 @@ char *ft_nline(char *str)
     char *new;
     int i = 0;
 
-    if (str[i] == 0) return NULL;
-    while (str[i] && str[i] != '\n') i++;
+    if (str[i] == 0) 
+        return NULL;
+    while (str[i] && str[i] != '\n') 
+        i++;
     new = (char *)malloc(sizeof(char) * (i + 2));
-    if (!new) return NULL;
+    if (!new) 
+        return NULL;
     i = 0;
-    while (str[i] && str[i] != '\n') {
+    while (str[i] && str[i] != '\n') 
+    {
         new[i] = str[i];
         i++;
     }
-    if (str[i] == '\n') {
+    if (str[i] == '\n') 
+    {
         new[i] = '\n';
         i++;
     }
@@ -119,12 +138,14 @@ char *ft_nline(char *str)
         int i = 0, j = 0;
 
         while (line[i] && line[i] != '\n') i++;
-        if (!line[i]) {
+        if (!line[i]) 
+        {
             free(line);
             return NULL;
         }
         str = (char *)malloc(sizeof(char) * (ft_len(line) - i + 1));
-        if (!str) return NULL;
+        if (!str) 
+            return NULL;
         i++;
         while (line[i]) str[j++] = line[i++];
         str[j] = '\0';
@@ -139,16 +160,18 @@ char *ft_nline(char *str)
 ```c
 char *get_next_line(int fd)
 {
-    char *out;
+    char        *out;
     static char *str;
 
-    if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) == -1) {
+    if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) == -1) 
+    {
         free(str);
         str = NULL;
         return NULL;
     }
     str = ft_alloc(fd, str);
-    if (!str) return NULL;
+    if (!str) 
+        return NULL;
     out = ft_nline(str);
     str = ft_rline(str);
     return out;
