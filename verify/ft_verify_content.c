@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gadget.c                                        :+:      :+:    :+:   */
+/*   ft_verify_content.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-20 08:03:54 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025-01-20 08:03:54 by rdel-olm         ###   ########.fr       */
+/*   Created: 2025/01/24 23:55:28 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/01/25 00:01:31 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,9 @@
  * 
  */
 
-int	ft_split_line(char ***cell, int fd)
+int	ft_verify_text(t_cub3d *cub, char **cell, int *i, int row)
 {
-	char	*row;
 
-	row = get_next_line(fd);
-	if (!row)
-	{
-		ft_manage_err(READ_ERR);
-		return (EXIT_FAILURE);
-	}
-	row = XXX;
-	*cell = ft_split(XXX);
-	if (!cell)
-	{
-		ft_manage_err(SPLIT_ERR);
-		free(row);
-		return (EXIT_FAILURE);
-	}
-	free(row);
-	return (EXIT_SUCCESS);
+
+
 }

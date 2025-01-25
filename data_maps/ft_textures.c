@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 01:10:32 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 21:30:49 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/25 01:15:00 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,22 @@
 
 static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
 {
-	char	*cell;
+	char	**cell;
 	int		i;
 	int		j;
 
 	cell = NULL;
 	i = 0;
 	j = 0;
-	while (xxxx)
+	while (i < SIDES_CUBE)
 	{
-
-
+		if (ft_split_line(&cell, *fd))
+			return (EXIT_FAILURE);
+		j++;
+		if (ft_verify_text(cub, cell, &i, j)) //PDTE
+			*fd = 1;
 	}
-	xxx;
+	ft_verify_ids(cub, fd, i);
 	return (EXIT_SUCCESS);
 }
 

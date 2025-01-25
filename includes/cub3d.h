@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 01:22:11 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/25 00:44:06 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,7 @@ int		ft_analyzer(char *argv, t_cub3d *cub);
 int		ft_mapping(t_cub3d *cub, int fd);
 int		ft_checking_lines(char	*map);
 char	*ft_matrix_to_str(char	*c, int fd);
-int 	ft_map_spliting(t_cub3d *cub, char *map);
+int		ft_map_spliting(t_cub3d *cub, char *map);
 void	ft_map_dimensions(t_map *map);
 
 // ============================================================================
@@ -167,6 +167,7 @@ void	ft_forbidden_space(int line, int col);
 void	ft_invalid_char(char **map, int line, int pos);
 void	ft_invalid_side(int line, int warning);
 void	ft_manage_err(const char *err);
+void	ft_manage_err_id(const char *id);
 void	ft_players(int index);
 
 // ============================================================================
@@ -175,17 +176,19 @@ void	ft_players(int index);
 
 int		ft_setup(t_cub3d *structure);
 void	ft_init_walls(t_cub3d *structure, mlx_image_t **image);
-void    ft_game_init(t_cub3d *cub);
-void    ft_playing_mode(t_cub3d *cub);
+void	ft_game_init(t_cub3d *cub);
+void	ft_playing_mode(t_cub3d *cub);
 
 // ============================================================================
 // Utils functions
 // ============================================================================
 
 int		ft_count_col(char **str);
+char	*ft_trim_newline(char *str);
+char	*ft_realloc(char *hint, int lenght);
 int		ft_split_line(char ***cell, int fd);
 char	*ft_new_strjoin(char const *s1, char const *s2);
-int 	ft_split_len(char **str);
+int		ft_split_len(char **str);
 
 // ============================================================================
 // Verify functions
@@ -195,7 +198,9 @@ int		ft_number_players(char **map);
 int		ft_verify_closure(t_cub3d *details);
 int		ft_verify_core(char **map);
 int		ft_verify_extremes(t_cub3d *details, char **map);
+void	ft_verify_ids(t_cub3d *cub, int *fd, int i);
 int		ft_verify_map(t_cub3d *input);
 int		ft_verify_spaces(char **map);
+int		ft_verify_text(t_cub3d *cub, char **cell, int *i, int row);
 
 #endif

@@ -96,7 +96,11 @@ ERR					= ${ERRORS_DIR}/ft_manage_err.c
 INT					= ${INIT_DIR}/ft_init_struct.c\
 									ft_game_init.c
 
-UTL					= ${UTILS_DIR}/ft_count_col.c
+UTL					= ${UTILS_DIR}/ft_alloc.c \
+						${UTILS_DIR}/ft_count.c \
+						${UTILS_DIR}/ft_erase.c \
+						${UTILS_DIR}/ft_new_strjoin.c \
+						${UTILS_DIR}/ft_splits.c
 
 CTRL				= ${CONTROL_DIR}/ft_control_args.c \
 						${CONTROL_DIR}/ft_ext_valid.c

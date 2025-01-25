@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 21:29:25 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/25 00:52:02 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define HEIGHT					1280
 # define WALL_SIZE				640
 # define FOV					60
+# define SIDES_CUBE				6
 
 # define INIT_ERR				"42Cub3d say: "
 # define ARROW					"==> "
@@ -61,6 +62,15 @@
 # define FT_SPLIT_ERR			"❗Error in ft_map_spliting with ft_split!"
 # define MAP_ERR				"❗Error, map is missing!"
 # define EXTRA_LINE_ERR			"❗Error, extra line in the map!"
+# define IDENT_ERR				"❗Identifier "
+# define IDENT2_ERR				" is not present."
+# define CEIL					"C"
+# define FLOOR					"F"
+# define NORTH					"N"
+# define SOUTH					"S"
+# define EAST					"E"
+# define WEST					"W"
+
 // ======== Pdtes de incorporar a codigo  =====================================
 
 # define MLX_INIT_ERR			"❗Error, something is wrong with mlx_init()"

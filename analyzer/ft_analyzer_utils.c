@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_analyser_utils.c                                :+:      :+:    :+:   */
+/*   ft_analyzer_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: drosales <drosales@student.42.fr>          #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-20 19:29:59 by drosales          #+#    #+#             */
-/*   Updated: 2025-01-20 19:29:59 by drosales         ###   ########.fr       */
+/*   Created: 2025/01/20 19:29:59 by drosales          #+#    #+#             */
+/*   Updated: 2025/01/25 00:03:44 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,21 @@ char	*ft_matrix_to_str(char	*c, int fd)
 	return (map);
 }
 
-int ft_map_spliting(t_cub3d *cub, char *map)
+int	ft_map_spliting(t_cub3d *cub, char *map)
 {
-    int flag;
+	int	flag;
 
-    flag = 0;
-    if (ft_checking_lines(map))
-        flag = 1;
-    if (flag == 1)
-        return (free(map), EXIT_FAILURE);
-    cub->map.map = ft_split(map, '\n');
-    free(map);
-    if (!cub->map.map)
-        return (ft_manage_err(FT_SPLIT_ERR), EXIT_FAILURE);
-    cub->map.line_map = ft_split_len(cub->map.map);
-    return (EXIT_SUCCESS);
+	flag = 0;
+	if (ft_checking_lines(map))
+		flag = 1;
+	if (flag == 1)
+		return (free(map), EXIT_FAILURE);
+	cub->map.map = ft_split(map, '\n');
+	free(map);
+	if (!cub->map.map)
+		return (ft_manage_err(FT_SPLIT_ERR), EXIT_FAILURE);
+	cub->map.line_map = ft_split_len(cub->map.map);
+	return (EXIT_SUCCESS);
 }
 
 void	ft_map_dimensions(t_map *map)
@@ -76,7 +76,7 @@ void	ft_map_dimensions(t_map *map)
 	int	len;
 
 	if (!map->map || !map->map[0])
-		return;
+		return ;
 	i = 0;
 	j = 0;
 	while (map->map[i])
