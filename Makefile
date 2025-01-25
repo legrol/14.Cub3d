@@ -91,7 +91,8 @@ SRC 				= ${SRC_DIR}/cub3D.c
 
 DMP					= ${DATAMAPS_DIR}/ft_textures.c
 
-ERR					= ${ERRORS_DIR}/ft_manage_err.c
+ERR					= ${ERRORS_DIR}/ft_manage_err.c \
+						${ERRORS_DIR}/ft_manage_err_2.c
 
 INT					= ${INIT_DIR}/ft_init_struct.c\
 									ft_game_init.c
@@ -106,6 +107,8 @@ CTRL				= ${CONTROL_DIR}/ft_control_args.c \
 						${CONTROL_DIR}/ft_ext_valid.c
 
 VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
+						${VERIFY_DIR}/ft_verify_content.c \
+						${VERIFY_DIR}/ft_verify_cube.c \
 						${VERIFY_DIR}/ft_verify_lines.c \
 						${VERIFY_DIR}/ft_verify_maps.c \
 						${VERIFY_DIR}/ft_verify_players.c \
