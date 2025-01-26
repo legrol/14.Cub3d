@@ -6,11 +6,56 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 19:29:59 by drosales          #+#    #+#             */
-/*   Updated: 2025/01/25 00:03:44 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/26 22:15:28 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
+
+/**
+ * The function "ft_map_dimensions" calculates the dimensions (width and 
+ * height) of a 2D map array and stores them in the corresponding structure 
+ * fields.
+ * 
+ * @param t_map *map          A pointer to the map structure containing the
+ *                            2D array and its dimension fields.
+ * 
+ * @return void               This function does not return a value.
+ *                            It updates the structure directly.
+ * 
+ * The function "ft_map_spliting" validates and splits a map string into a 2D
+ * array of strings (matrix). It ensures the map string is properly formatted
+ * and splits it by newline characters.
+ * 
+ * @param t_cub3d *cub        A pointer to the structure where the map data
+ *                            will be stored.
+ * @param char *map           The map string to validate and split.
+ * 
+ * @return int                Returns EXIT_SUCCESS if the map is valid and 
+ * 							  split successfully. Returns EXIT_FAILURE on 
+ * 							  error.
+ * 
+ * The function "ft_matrix_to_str" reads a map from a file descriptor and
+ * concatenates its lines into a single string. It handles errors during file
+ * reading and memory allocation.
+ * 
+ * @param char *c             The first line of the map, passed as an initial
+ *                            string to join.
+ * @param int fd              The file descriptor from which to read the map.
+ * 
+ * @return char*              Returns the concatenated map string on success.
+ *                            Returns NULL if an error occurs.
+ * 
+ * The function "ft_checking_lines" validates the structure of a map string by
+ * checking for invalid empty lines or extra spaces between lines. It ensures
+ * that the map does not contain empty lines between valid rows or at the end.
+ * 
+ * @param char *map            The map string to validate.
+ * 
+ * @return int                 Returns EXIT_SUCCESS if the map is valid.
+ *                             Returns EXIT_FAILURE if invalid lines are found.
+ * 
+ */
 
 int	ft_checking_lines(char	*map)
 {

@@ -6,13 +6,28 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 00:30:57 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/25 00:47:20 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/26 20:54:35 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
 /**
+ * The function "ft_manage_err_rgb" logs an error message specifically for 
+ * invalid RGB values found in the map file. It provides details about the 
+ * type of error, the invalid character, and its position (row and column) in 
+ * the map data.
+ * 
+ * @param const char *err       A pointer to a string describing the type 
+ *                              of error (e.g., "Invalid RGB format").
+ * @param char **cell           A 2D array of strings representing the map or
+ *                              RGB data being analyzed.
+ * @param int row               The row index of the invalid character.
+ * @param int col               The column index of the invalid character.
+ * 
+ * @return void                 This function does not return a value. It 
+ *                              prints the error details to the console.
+ * 
  * The function "ft_manage_err_id" logs an error message related to an 
  * invalid or problematic identifier. It formats the error message using 
  * styles and macros for clarity and consistency.
@@ -24,8 +39,16 @@
  * 
  */
 
+void	ft_manage_err_rgb(const char *err, char **cell, int row, int col)
+{
+	ft_printf(BDRED "Error: \n" RESET RED INIT_ERR RESET GREEN ARROW RESET \
+	YELLOW "%s\n", err);
+	ft_printf(RED "%s" RESET YELLOW LINE_ERR RESET RED "%i.\n" RESET, \
+	cell[row][col], row);
+}
+
 void	ft_manage_err_id(const char *id)
 {
 	ft_printf(BDRED "Error: \n" RESET RED INIT_ERR RESET GREEN ARROW RESET \
-	YELLOW IDENT_ERR RESET RED "%s" RESET YELLOW IDENT2_ERR RESET, id);
+	YELLOW IDENT_ERR RESET RED "%s" RESET YELLOW IDENT2_ERR RESET "\n", id);
 }

@@ -89,7 +89,9 @@ LFLAGS				= -L${LIBRARIES}/${LIBFT_DIR} -lft \
 
 SRC 				= ${SRC_DIR}/cub3D.c
 
-DMP					= ${DATAMAPS_DIR}/ft_textures.c
+DMP					= ${DATAMAPS_DIR}/ft_textures.c \
+						${DATAMAPS_DIR}/ft_colors.c \
+						${DATAMAPS_DIR}/ft_colors_2.c
 
 ERR					= ${ERRORS_DIR}/ft_manage_err.c \
 						${ERRORS_DIR}/ft_manage_err_2.c
@@ -109,6 +111,7 @@ CTRL				= ${CONTROL_DIR}/ft_control_args.c \
 VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
 						${VERIFY_DIR}/ft_verify_content.c \
 						${VERIFY_DIR}/ft_verify_cube.c \
+						${VERIFY_DIR}/ft_verify_images.c \
 						${VERIFY_DIR}/ft_verify_lines.c \
 						${VERIFY_DIR}/ft_verify_maps.c \
 						${VERIFY_DIR}/ft_verify_players.c \

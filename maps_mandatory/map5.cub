@@ -1,7 +1,7 @@
-NO ./imgs/nature_04.png
-SO ./imgs/nature_01.png
-EA ./imgs/nature_03.png
-WE ./imgs/nature_02.png
+N ./imgs/nature_04.png
+S ./imgs/nature_01.png
+E ./imgs/nature_03.png
+W ./imgs/nature_02.png
 
 C 9, 24, 51
 F 48, 27, 104

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/25 00:52:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/26 21:55:10 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@
 # define WALL_SIZE				640
 # define FOV					60
 # define SIDES_CUBE				6
+# define RGB_VALID_MIN			1
+# define RGB_VALID_MAX			255
 
 # define INIT_ERR				"42Cub3d say: "
 # define ARROW					"==> "
@@ -52,6 +54,7 @@
 # define PLAYERS_0_ERR			"❗No player on the map. There must be one."
 # define PLAYERS_NO1_ERR		"❗Too many players on the map. There must be \
 								one."
+# define OPEN_TEXTURE_ERR		"📖 Error, could not open texture filee!!!"
 # define OPEN_ERR				"📖 Error opening source file!!!"
 # define CLOSED_ERR				"📚 Error closing source file!!!"
 # define OPEN_MAP_ERR			"🗺️ Error opening map."
@@ -64,6 +67,14 @@
 # define EXTRA_LINE_ERR			"❗Error, extra line in the map!"
 # define IDENT_ERR				"❗Identifier "
 # define IDENT2_ERR				" is not present."
+# define IDENT3_ERR				"❗Invalid identifier."
+# define RGB_ERR				"❗Wrong rgb value."
+# define FORMAT_RGB_ERR			"❗Invalid RGB format."
+# define ARG_RGB_ERR			"❗Wrong rgb argument."
+# define LINE_ERR				" in the line "
+# define ARG_FILE_ERR			"❗Extra argument in file."
+# define TEXTURE_ERR			"❗Wrong texture format."
+# define TEXTURE_2_ERR			"Error in row: "
 # define CEIL					"C"
 # define FLOOR					"F"
 # define NORTH					"N"
@@ -80,7 +91,6 @@
 # define IMG_ERR 				"❌4️⃣2️⃣🎞️ Error initializing image MLX42!!!"
 # define INIT_MAP_ERR			"🌎 Error initializing map!!!"
 # define MATRIX1_ERR			"🔛 Wrong matrix line width!!!"
-# define MATRIX2_ERR			"❗🔛 FdF file has irregular width!!!"
 # define MLLC_CAM_ERR			"📽️ Error ailed to allocate memory for \
 								camera!!!"
 // ============================================================================

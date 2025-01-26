@@ -6,11 +6,39 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 23:24:40 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 01:22:20 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/25 19:33:00 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
+
+/**
+ * The function "ft_analyzer" analyzes the input map file, validates its 
+ * extension, processes texture data, and maps the game world. It also 
+ * calculates the map dimensions and handles errors gracefully.
+ * 
+ * @param char *argv			The file path of the map file to be analyzed.
+ * @param t_cub3d *cub			A pointer to the main game structure containing 
+ * 								the map and texture information.
+ * 
+ * @return int					Returns EXIT_SUCCESS if the file is 
+ * 								successfully analyzed. Returns EXIT_FAILURE if 
+ * 								any error occurs.
+ * 
+ * The function "ft_mapping" processes the map data from the file descriptor 
+ * and assigns it to the `t_cub3d` structure. It reads the map lines, 
+ * converts them into a single string, trims unwanted characters, and splits 
+ * the map into the required format.
+ * 
+ * @param t_cub3d *cub			A pointer to the main game structure containing 
+ * 								the map and texture information.
+ * @param int fd				The file descriptor of the map file.
+ * 
+ * @return int					Returns EXIT_SUCCESS if the map is 
+ * 								successfully processed. Returns EXIT_FAILURE 
+ * 								if any error occurs during processing.
+ * 
+ */
 
 int	ft_mapping(t_cub3d *cub, int fd)
 {
@@ -51,4 +79,3 @@ int	ft_analyzer(char *argv, t_cub3d *cub)
 	ft_map_dimensions(&cub->map);
 	return (warning);
 }
-

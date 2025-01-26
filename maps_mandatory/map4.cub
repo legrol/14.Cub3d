@@ -1,7 +1,7 @@
-NO ./imgs/wooden-wall_2_colt.png
-SO ./imgs/wooden-wall_2_native_american.png
-EA ./imgs/wooden-wall_2_derringer.png
-WE ./imgs/wooden-wall_2_winchester.png
+N ./imgs/wooden-wall_2_colt.png
+S ./imgs/wooden-wall_2_native_american.png
+E ./imgs/wooden-wall_2_derringer.png
+W ./imgs/wooden-wall_2_winchester.png
 
 C 9, 24, 51
 F 48, 27, 104
