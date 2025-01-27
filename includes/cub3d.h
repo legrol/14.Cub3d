@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/26 22:09:42 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:13:05 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@
 # include "examft.h"
 # include "ft_macros.h"
 # include "ft_printf.h"
-# include "get_next_line_bonus.h"
-# include "get_next_line.h"
 # include "libft.h"
 # include "../MLX42/include/MLX42/MLX42.h"
 
