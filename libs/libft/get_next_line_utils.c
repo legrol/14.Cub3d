@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdel-olm <rdel-olm@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-04-24 07:07:34 by rdel-olm          #+#    #+#             */
-/*   Updated: 2024-04-24 07:07:34 by rdel-olm         ###   ########.fr       */
+/*   Created: 2024/04/24 07:07:34 by rdel-olm          #+#    #+#             */
+/*   Updated: 2025/01/27 20:58:42 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ size_t	ft_gnl_len(char *str)
 	return (i);
 }
 
-char	ft_gnl_strchr(char	*str, int c)
+char	*ft_gnl_strchr(char	*str, int c)
 {
 	size_t	i;
 
 	i = 0;
 	if (!str)
-		return (0);
+		return (NULL);
 	if (c == '\0')
 		return ((char *)&str[ft_gnl_len(str)]);
 	while (str[i])
@@ -41,7 +41,7 @@ char	ft_gnl_strchr(char	*str, int c)
 			return ((char *)&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 char	*ft_gnlstrjoin(char *str1, char *str2)
@@ -57,7 +57,8 @@ char	*ft_gnlstrjoin(char *str1, char *str2)
 	}
 	if (!str2)
 		return (NULL);
-	end = (char *)malloc(sizeof(char) * (ft_len(str1) + ft_len(str2) + 1));
+	end = (char *)malloc(sizeof(char) * (ft_strlen(str1) + \
+	ft_strlen(str2) + 1));
 	if (end == NULL)
 		return (NULL);
 	i = 0;
@@ -81,7 +82,7 @@ char	*ft_alloc(int fd, char *str)
 	if (!buff)
 		return (NULL);
 	len = 1;
-	while (!(ft_gnlstrchr(str, '\n')) && len > 0)
+	while (!(ft_gnl_strchr(str, '\n')) && len > 0)
 	{
 		len = read(fd, buff, BUFFER_SIZE);
 		if (len == -1)

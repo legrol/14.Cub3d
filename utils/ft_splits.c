@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 19:43:20 by drosales          #+#    #+#             */
-/*   Updated: 2025/01/25 17:12:49 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/27 22:50:36 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
  * @return int						Returns the number of strings in the array. 
  * 									Returns 0 if the input is NULL.
  * 
- * The function "ft_split_free" frees all memory associated with a 2D array 
+ * The function "ft_split_clear" frees all memory associated with a 2D array 
  * of strings (e.g., the result of `ft_split`). It iterates through each 
  * element of the array, frees it, and finally frees the array itself.
  * 

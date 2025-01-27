@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pabromer <pabromer@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 06:42:59 by rdel-olm          #+#    #+#             */
-/*   Updated: 2024/10/31 10:57:09 by pabromer         ###   ########.fr       */
+/*   Updated: 2025/01/27 20:58:40 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char	*ft_rline(char *line);
 size_t	ft_gnl_len(char *str);
-char	ft_gnl_strchr(char	*str, int c);
+char	*ft_gnl_strchr(char	*str, int c);
 char	*ft_gnlstrjoin(char *str1, char *str2);
 char	*ft_alloc(int fd, char *str);
 char	*ft_nline(char *str);

@@ -26,7 +26,7 @@ char	*ft_rline(char *line)
 		free(line);
 		return (NULL);
 	}
-	str = (char *)malloc(sizeof(char) * (ft_len(line) - i + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(line) - i + 1));
 	if (!str)
 		return (NULL);
 	i++;

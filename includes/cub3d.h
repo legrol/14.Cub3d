@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/27 19:39:52 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/27 23:00:01 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,27 +40,6 @@
 // Structures
 // ============================================================================
 
-typedef struct s_cub3d
-{
-	mlx_t			*mlx;
-	mlx_image_t		*background;
-	mlx_image_t		*walls;
-	t_map			map;
-	t_player		player;
-	t_textures		textures;
-	char			*file;
-	int				ray_number;
-	int				move;
-}					t_cub3d;
-
-typedef struct s_map
-{
-	int			x_map;
-	int			y_map;
-	int			line_map;
-	char		**map;
-}				t_map;
-
 typedef struct s_line
 {
 	int			x;
@@ -76,16 +55,6 @@ typedef struct s_paint_coord
 	int			x;
 	int			y;
 }				t_paint_coord;
-
-typedef struct s_player
-{
-	double		angle;
-	double		x_player_pos;
-	double		y_player_pos;
-	int			x_map;
-	int			y_map;
-	t_ray		ray[WIDTH];
-}				t_player;
 
 typedef struct s_ray
 {
@@ -113,6 +82,16 @@ typedef struct s_ray
 	double		ray_move_y;
 }				t_ray;
 
+typedef struct s_player
+{
+	double		angle;
+	double		x_player_pos;
+	double		y_player_pos;
+	int			x_map;
+	int			y_map;
+	t_ray		ray[WIDTH];
+}				t_player;
+
 typedef struct s_textures
 {
 	mlx_texture_t	*north_text;
@@ -132,6 +111,27 @@ typedef struct s_textures
 	int				sky_flag;
 	int				floor_flag;
 }					t_textures;
+
+typedef struct s_map
+{
+	int			x_map;
+	int			y_map;
+	int			line_map;
+	char		**map;
+}				t_map;
+
+typedef struct s_cub3d
+{
+	mlx_t			*mlx;
+	mlx_image_t		*background;
+	mlx_image_t		*walls;
+	t_map			map;
+	t_player		player;
+	t_textures		textures;
+	char			*file;
+	int				ray_number;
+	int				move;
+}					t_cub3d;
 
 // ============================================================================
 // Analyzer functions
@@ -157,6 +157,7 @@ int				ft_ext_valid(char *map_name);
 
 unsigned int	ft_fetch_rgb(char **cell);
 int				ft_get_textures_data(t_cub3d *cub, int *flag, int *fd);
+int				ft_load_textures(t_cub3d *cub);
 unsigned int	ft_rgb_get(char **c);
 int				ft_control_colors(char **c);
 int				ft_control_colors_nbr(char **cell, int line);
@@ -187,7 +188,10 @@ void			ft_playing_mode(t_cub3d *cub);
 // Utils functions
 // ============================================================================
 
+void			ft_print_banner(void);
 int				ft_count_col(char **str);
+void			ft_erase_textures(t_cub3d *cub);
+void			ft_free_textures(t_cub3d *cub);
 char			*ft_new_strjoin(char const *s1, char const *s2);
 char			*ft_trim_newline(char *str);
 char			*ft_realloc(char *hint, int lenght);

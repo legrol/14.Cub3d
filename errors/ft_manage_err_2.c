@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 00:30:57 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/26 20:54:35 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/27 21:01:46 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_manage_err_rgb(const char *err, char **cell, int row, int col)
 {
 	ft_printf(BDRED "Error: \n" RESET RED INIT_ERR RESET GREEN ARROW RESET \
 	YELLOW "%s\n", err);
-	ft_printf(RED "%s" RESET YELLOW LINE_ERR RESET RED "%i.\n" RESET, \
+	ft_printf(RED "%s" RESET YELLOW LINE2_ERR RESET RED "%i.\n" RESET, \
 	cell[row][col], row);
 }
 

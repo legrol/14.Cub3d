@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 18:16:06 by drosales          #+#    #+#             */
-/*   Updated: 2025/01/18 22:07:25 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/27 21:08:21 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,17 +108,18 @@ int	ft_setup(t_cub3d *structure)
 	structure->ray_number = 0;
 	return (EXIT_SUCCESS);
 }
+
 void	ft_init_walls(t_cub3d *structure, mlx_image_t **image)
 {
 	*image = mlx_new_image(structure->mlx, WIDTH, HEIGHT);
 	if (!*image)
 	{
-		ft_manage_error(FLOOR_OR_SKY_ERR);
+		ft_manage_err(FLOOR_OR_SKY_ERR);
 		exit (EXIT_FAILURE); //PROHIBIDO, REFORMULAR?
 	}
 	if (mlx_image_to_window(structure->mlx, *image, 0, 0) == -1)
 	{
-		ft_manage_error(IMG_TO_WINDOW_ERR);
+		ft_manage_err(IMG_TO_WINDOW_ERR);
 		exit (EXIT_FAILURE); //PROHIBIDO, REFORMULAR?
 	}
 }

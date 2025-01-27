@@ -97,7 +97,7 @@ ERR					= ${ERRORS_DIR}/ft_manage_err.c \
 						${ERRORS_DIR}/ft_manage_err_2.c
 
 INT					= ${INIT_DIR}/ft_init_struct.c\
-									ft_game_init.c
+						${INIT_DIR}/ft_game_init.c
 
 UTL					= ${UTILS_DIR}/ft_alloc.c \
 						${UTILS_DIR}/ft_count.c \
@@ -120,7 +120,7 @@ VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
 # FRE					= ${FREE_DIR}/xxxx.c
 
 ANZ					= ${ANALYZ_DIR}/ft_analyzer.c\
-									ft_analyzer_utils.c
+						${ANALYZ_DIR}/ft_analyzer_utils.c
 
 # EXE					= ${EXEC_DIR}/xxxx.c
 
@@ -154,10 +154,6 @@ ${NAME}: ftlibft ftprintf ftexamft  ${OBJ_SRC}  \
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
 	@${MKD} $(dir $@)
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
-
-#${OBJ_DIR}/%.o: ${LIBRARIES}/${GNL_DIR}/%.c
-#	@${MKD} $(dir $@)
-#	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
 ${OBJ_DIR}/%.o: ${DATAMAPS_DIR}/%.c
 	@${MKD} $(dir $@)
