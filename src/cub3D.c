@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:24:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/19 00:13:11 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:13:12 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	main(int argc, char **argv)
 
 
 	}
-
-	//parser
+	//images
+	ft_game_init();
 
 	// cub = ft_init(argv[1]); // pdte desarrollar
 	// map = ft_init_map(argv[1]); // pdte desarrollar
