@@ -212,5 +212,23 @@ int				ft_verify_img_data(char **cell, int row);
 int				ft_verify_map(t_cub3d *input);
 int				ft_verify_spaces(char **map);
 int				ft_verify_texture(t_cub3d *cub, char **cell, int *i, int row);
+void			ft_player_position(t_cub3d *cub, char **map);
+
+// ============================================================================
+// Calculations functions
+// ============================================================================
+
+void			ft_angle(t_cub3d *cub, char cardinal);
+void			ft_ray_init(t_cub3d *cub);
+void			ft_moves(t_cub3d *cub);
+void			ft_movement(t_cub3d *cub, double angle);
+bool			ft_check_next_step(t_cub3d *cub, double move_x, double move_y);
+bool			ft_valid_movement(t_cub3d *cub, double move_x, double move_y);
+
+// ============================================================================
+// Rendering functions
+// ============================================================================
+
+int				ft_rendering(t_cub3d *cub);
 
 #endif

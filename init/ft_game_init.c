@@ -12,6 +12,21 @@
 
 #include "../includes/cub3d.h"
 
+void	ft_callback(void *value)
+{
+	t_cub3d	*cub;
+
+	cub = value;
+	if (cub->player.ray[0].ray_dist_to_y)
+		mlx_delete_image(cub->mlx, cub->walls);
+	if (mlx_is_key_down(cub->mlx, MLX_KEY_ESCAPE))	
+		mlx_close_window(cub->mlx);
+	ft_moves();
+	ft_rotation();
+	ft_init_walls(cub, &cub->walls);
+	ft_raycasting();
+}
+
 void    ft_playing_mode(t_cub3d *cub)
 {
 	cub->mlx = mlx_init(WIDTH, HEIGHT, "Cub3D", true);
@@ -24,14 +39,14 @@ void    ft_playing_mode(t_cub3d *cub)
 	ft_init_walls(cub, cub->background);
 	ft_init_walls(cub, cub->walls);
 	cub->move = 4;
-	ft_player_position(); // KEEP CODING
-	ft_render();           // KEEP CODING
+	ft_player_position(cub, cub->map.map);
+	ft_rendering(cub);
 }
 
 void    ft_game_init(t_cub3d *cub)
 {
 	ft_playing_mode(cub);
-	mlx_loop_hook(cub->mlx, xxxxxx, cub); // FT_CALLBACK NEEDED
+	mlx_loop_hook(cub->mlx, ft_callback, cub); // FT_CALLBACK NEEDED
 	mlx_loop(cub->mlx);
 	mlx_terminate(cub->mlx);
 }

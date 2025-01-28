@@ -27,6 +27,7 @@
 # define HEIGHT					1280
 # define WALL_SIZE				640
 # define FOV					60
+# define M_PI					3.14159265358979323846
 # define SIDES_CUBE				6
 # define RGB_VALID_MIN			1
 # define RGB_VALID_MAX			255
@@ -54,6 +55,7 @@
 # define PLAYERS_0_ERR			"❗No player on the map. There must be one."
 # define PLAYERS_NO1_ERR		"❗Too many players on the map. There must be \
 								one."
+# define MLX_INIT_ERR			"❗Error, MLX isn´t working correctly!!!"
 # define OPEN_TEXTURE_ERR		"📖 Error, could not open texture filee!!!"
 # define OPEN_ERR				"📖 Error opening source file!!!"
 # define CLOSED_ERR				"📚 Error closing source file!!!"
