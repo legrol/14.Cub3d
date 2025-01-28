@@ -45,8 +45,6 @@ CONTROL_DIR			= ./control
 DATAMAPS_DIR		= ./data_maps
 ERRORS_DIR			= ./errors
 IMAGES_DIR			= ./imgs
-# EXEC_DIR			= ./exec
-# FREE_DIR			= ./free
 INIT_DIR			= ./init
 LIBRARIES			= ./libs
 OBJ_DIR				= ./obj
@@ -117,12 +115,8 @@ VRF					= ${VERIFY_DIR}/ft_verify_enclosure.c \
 						${VERIFY_DIR}/ft_verify_players.c \
 						${VERIFY_DIR}/ft_verify_spaces.c
 
-# FRE					= ${FREE_DIR}/xxxx.c
-
 ANZ					= ${ANALYZ_DIR}/ft_analyzer.c\
 						${ANALYZ_DIR}/ft_analyzer_utils.c
-
-# EXE					= ${EXEC_DIR}/xxxx.c
 
 OBJ_SRC				= $(patsubst ${SRC_DIR}/%.c, ${OBJ_DIR}/%.o, ${SRC})
 OBJ_DMP				= $(patsubst ${DATAMAPS_DIR}/%.c, ${OBJ_DIR}/%.o, ${DMP})
@@ -131,9 +125,7 @@ OBJ_INT				= $(patsubst ${INIT_DIR}/%.c, ${OBJ_DIR}/%.o, ${INT})
 OBJ_UTL				= $(patsubst ${UTILS_DIR}/%.c, ${OBJ_DIR}/%.o, ${UTL})
 OBJ_CTRL			= $(patsubst ${CONTROL_DIR}/%.c, ${OBJ_DIR}/%.o, ${CTRL})
 OBJ_VRF				= $(patsubst ${VERIFY_DIR}/%.c, ${OBJ_DIR}/%.o, ${VRF})
-# OBJ_FRE				= $(patsubst ${FREE_DIR}/%.c, ${OBJ_DIR}/%.o, ${FRE})
 OBJ_ANZ				= $(patsubst ${ANALYZ_DIR}/%.c, ${OBJ_DIR}/%.o, ${ANZ})
-# OBJ_EXE				= $(patsubst ${EXEC_DIR}/%.c, ${OBJ_DIR}/%.o, ${EXE})
 
 # ═══ Rules ══════════════════════════════════════════════════════════════════ #
 #     -----                                                                    #
@@ -179,17 +171,9 @@ ${OBJ_DIR}/%.o: ${VERIFY_DIR}/%.c
 	@${MKD} $(dir $@)
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
-# ${OBJ_DIR}/%.o: ${FREE_DIR}/%.c
-# 	@${MKD} $(dir $@)
-# 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
-
 ${OBJ_DIR}/%.o: ${ANALYZ_DIR}/%.c
 	@${MKD} $(dir $@)
 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
-
-# ${OBJ_DIR}/%.o: ${EXEC_DIR}/%.c
-# 	@${MKD} $(dir $@)
-# 	@$(CC) ${CFLAGS} ${IFLAGS} -c $< -o $@
 
 ftlibft:
 	@cd ${LIBRARIES}/${LIBFT_DIR} ${MK_} all

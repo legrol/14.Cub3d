@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/27 22:21:30 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/28 13:14:12 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,18 +85,5 @@
 # define SOUTH					"S"
 # define EAST					"E"
 # define WEST					"W"
-
-// ======== Pdtes de incorporar a codigo  =====================================
-
-# define MLX_INIT_ERR			"❗Error, something is wrong with mlx_init()"
-# define MALLOC_ERR				"❌Ⓜⓐⓛⓛⓞⓒ Error creating malloc!!!"
-# define MLX_ERR 				"4️⃣2️⃣📈📉 Error connecting to graphics server \
-								MLX42!!!"
-# define IMG_ERR 				"❌4️⃣2️⃣🎞️ Error initializing image MLX42!!!"
-# define INIT_MAP_ERR			"🌎 Error initializing map!!!"
-# define MATRIX1_ERR			"🔛 Wrong matrix line width!!!"
-# define MLLC_CAM_ERR			"📽️ Error ailed to allocate memory for \
-								camera!!!"
-// ============================================================================
 
 #endif
