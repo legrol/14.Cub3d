@@ -1,0 +1,11 @@
+N ./img/textures/test/north.xpm
+S ./img/textures/test/south.xpm
+W ./img/textures/test/west.xpm
+E ./img/textures/test/east.xpm
+
+F 20,20,20
+C 200,200,200
+
+111111111111111111111
+1000000000000000000E1
+111111111111111111111

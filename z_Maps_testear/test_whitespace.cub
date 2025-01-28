@@ -1,23 +1,9 @@
 
+N ./textures/test/north.xpm
 
-
-
-
-
-
-
-NO textures/test/north.xpm
-
-
-
-
-
-
-
-
-SO textures/test/south.xpm
-                        WE textures/test/west.xpm
-        EA textures/test/east.xpm            
+S ./textures/test/south.xpm
+                        W ./textures/test/west.xpm
+        E ./textures/test/east.xpm            
 
         F 20,           20,             20
 C 200,          200,200
@@ -37,22 +23,6 @@ C 200,          200,200
 11111           
 
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

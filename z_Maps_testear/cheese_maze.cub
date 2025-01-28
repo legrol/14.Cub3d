@@ -1,10 +1,10 @@
-NO textures/matrix.xpm
-SO textures/matrix.xpm
-WE textures/matrix.xpm
-EA textures/matrix.xpm
+N ./z_textures/simonkraft/wet_sponge.xpm
+S ./z_textures/simonkraft/wet_sponge.xpm
+W ./z_textures/simonkraft/wet_sponge.xpm
+E ./z_textures/simonkraft/wet_sponge.xpm
 
-F 0,0,0
-C 0,0,0
+F 164,169,20
+C 153,204,255
 
 111111111111111111111
 101000001000000000001
@@ -27,4 +27,3 @@ C 0,0,0
 101010111011111111101
 1N1000001000000000001
 111111111111111111111
-

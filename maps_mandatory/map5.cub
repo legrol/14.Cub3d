@@ -1,7 +1,7 @@
-N ./img/onepiece_wall_chopper.png
-S ./img/onepiece_wall_nami.png
-E ./img/onepiece_wall_monkey.png
-W ./img/onepiece_wall_nico.png
+N ./img/vg_n.png
+S ./img/vg_s.png
+E ./img/vg_e.png
+W ./img/vg_w.png
 
 C 9, 24, 51
 F 48, 27, 104
