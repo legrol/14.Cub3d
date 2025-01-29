@@ -21,10 +21,10 @@ void	ft_callback(void *value)
 		mlx_delete_image(cub->mlx, cub->walls);
 	if (mlx_is_key_down(cub->mlx, MLX_KEY_ESCAPE))	
 		mlx_close_window(cub->mlx);
-	ft_moves();
-	ft_rotation();
+	ft_moves(cub);
+	ft_rotation(cub);
 	ft_init_walls(cub, &cub->walls);
-	ft_raycasting();
+	ft_raycasting(cub, &cub->player);
 }
 
 void    ft_playing_mode(t_cub3d *cub)
@@ -46,7 +46,7 @@ void    ft_playing_mode(t_cub3d *cub)
 void    ft_game_init(t_cub3d *cub)
 {
 	ft_playing_mode(cub);
-	mlx_loop_hook(cub->mlx, ft_callback, cub); // FT_CALLBACK NEEDED
+	mlx_loop_hook(cub->mlx, ft_callback, cub);
 	mlx_loop(cub->mlx);
 	mlx_terminate(cub->mlx);
 }

@@ -31,3 +31,26 @@ void	ft_ray_init(t_cub3d *cub)
 		i++;
 	}
 }
+
+void	ft_init_ray_values(t_cub3d *cub, t_ray *ray)
+{
+	ray->ray_move_x = 0;
+	ray->ray_move_y = 0;
+	ray->x_map = cub->player.x_map;
+	ray->y_map = cub->player.y_map;
+	ray->x_player_pos = cub->player.x_player_pos;
+	ray->y_player_pos = cub->player.y_player_pos;
+	ray->ray_x = cos(ray->angle);
+	ray->ray_y = sin(ray->angle);
+	ray->ray_dist_to_x = 1 / fabs(ray->ray_x);
+	ray->ray_dist_to_y = 1 / fabs(ray->ray_y);
+	if (ray->ray_x < 0)
+		ray->ray_move_x = -1;
+	else
+		ray->ray_move_x = 1;
+	if (ray->ray_y < 0)
+		ray->ray_move_y = -1;
+	else
+		ray->ray_move_y = 1;
+	ray->flag = 0;
+}

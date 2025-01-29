@@ -215,9 +215,20 @@ int				ft_verify_texture(t_cub3d *cub, char **cell, int *i, int row);
 void			ft_player_position(t_cub3d *cub, char **map);
 
 // ============================================================================
-// Calculations functions
+// Calculations, movement and raycasting functions
 // ============================================================================
 
+void			ft_raycasting(t_cub3d *cub, t_player *player);
+void    		ft_vert(t_cub3d *cub, t_ray *ray);
+void    		ft_hypo(t_ray *ray);
+void    		ft_horizontal_impact(t_ray *ray);
+void    		ft_vertical_impact(t_ray *ray);
+void			ft_ray_impact(t_cub3d *cub, t_ray *ray);
+void			ft_wall_finder(t_cub3d *cub, t_ray *ray);
+void			ft_dist_player_to_wall(t_cub3d *cub, t_ray *ray);
+void			ft_init_ray_values(t_cub3d *cub, t_ray *ray);
+void			ft_rotation(t_cub3d *cub);
+void			ft_angles_checker(double *angle, double i);
 void			ft_angle(t_cub3d *cub, char cardinal);
 void			ft_ray_init(t_cub3d *cub);
 void			ft_moves(t_cub3d *cub);
