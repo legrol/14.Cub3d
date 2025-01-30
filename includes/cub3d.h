@@ -155,6 +155,7 @@ int				ft_ext_valid(char *map_name);
 // DataMaps functions
 // ============================================================================
 
+uint32_t		ft_walls_colors(t_cub3d *cub, t_ray *ray, double size);
 unsigned int	ft_fetch_rgb(char **cell);
 int				ft_get_textures_data(t_cub3d *cub, int *flag, int *fd);
 int				ft_load_textures(t_cub3d *cub);
@@ -240,6 +241,9 @@ bool			ft_valid_movement(t_cub3d *cub, double move_x, double move_y);
 // Rendering functions
 // ============================================================================
 
+uint32_t		ft_rgba(uint8_t pixel[4]);
+uint32_t		ft_get_the_colors(double x, double size, mlx_texture_t *texture);
 int				ft_rendering(t_cub3d *cub);
+double			ft_wallsize(t_ray *ray);
 
 #endif

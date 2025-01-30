@@ -93,6 +93,6 @@ void	ft_raycasting(t_cub3d *cub, t_player *player)
 	{
 		ft_ray_impact(cub, &player->ray[i]);
 		ft_painting_col(cub, &player->ray[i], i);
-		i++; // KEEP WORKING ON THIS FUNCTION
+		i++;
 	}
 }

@@ -152,3 +152,30 @@ unsigned int	ft_fetch_rgb(char **cell)
 	}
 	return (rgb_color);
 }
+
+uint32_t	ft_walls_colors(t_cub3d *cub, t_ray *ray, double size)
+{
+	uint32_t	c;
+
+	if (ray->flag == 0)
+	{
+		if (ray->ray_x > 0)
+			c = ft_get_the_colors(ray->ray_hit_in_map_dist \
+				- (int)ray->ray_hit_in_map_dist, size, cub->textures.east_text);
+		if (ray->ray_x < 0)
+			c = ft_get_the_colors(ray->ray_hit_in_map_dist \
+				- (int)ray->ray_hit_in_map_dist, size, cub->textures.west_text);
+		return (c);
+	}
+	else if (ray->flag == 1)
+	{
+		if (ray->ray_y > 0)
+			c = ft_get_the_colors(ray->ray_hit_in_map_dist \
+				- (int)ray->ray_hit_in_map_dist, size, cub->textures.south_text);
+		if (ray->ray_y < 0)
+			c = ft_get_the_colors(ray->ray_hit_in_map_dist \
+				- (int)ray->ray_hit_in_map_dist, size, cub->textures.north_text);
+		return (c);
+	}
+	return (0x33333388);
+}
