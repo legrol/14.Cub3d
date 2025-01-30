@@ -219,10 +219,10 @@ void			ft_player_position(t_cub3d *cub, char **map);
 // ============================================================================
 
 void			ft_raycasting(t_cub3d *cub, t_player *player);
-void    		ft_vert(t_cub3d *cub, t_ray *ray);
-void    		ft_hypo(t_ray *ray);
-void    		ft_horizontal_impact(t_ray *ray);
-void    		ft_vertical_impact(t_ray *ray);
+void			ft_vert(t_cub3d *cub, t_ray *ray);
+void			ft_hypo(t_ray *ray);
+void			ft_horizontal_impact(t_ray *ray);
+void			ft_vertical_impact(t_ray *ray);
 void			ft_ray_impact(t_cub3d *cub, t_ray *ray);
 void			ft_wall_finder(t_cub3d *cub, t_ray *ray);
 void			ft_dist_player_to_wall(t_cub3d *cub, t_ray *ray);

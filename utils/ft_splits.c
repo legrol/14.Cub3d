@@ -25,8 +25,7 @@
  * @return int						Returns EXIT_SUCCESS on success. If an 
  * 									error occurs (e.g., read or split failure), 
  * 									it logs the error and returns EXIT_FAILURE.
- * 
- * 
+ *  
  * The function "ft_split_len" calculates the number of strings in a 2D 
  * array of strings (e.g., the result of `ft_split`).
  * 

@@ -12,6 +12,19 @@
 
 #include "../includes/cub3d.h"
 
+/**
+ * The function "ft_player_position" locates the player's initial position 
+ * in the game map and sets the corresponding coordinates in the game 
+ * structure.
+ * It also determines the player's initial viewing angle and initializes rays 
+ * for rendering.
+ * 
+ * @param t_cub3d *cub			Pointer to the game structure containing player
+ * 								and map data.
+ * @param char **map			The 2D array representing the game map.
+ * 
+ */
+
 void	ft_player_position(t_cub3d *cub, char **map)
 {
 	int		x;

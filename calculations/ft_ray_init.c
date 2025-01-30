@@ -12,6 +12,31 @@
 
 #include "../includes/cub3d.h"
 
+/**
+ * The function "ft_init_ray_values" initializes the ray properties before 
+ * performing raycasting. It sets up position values, movement direction, and 
+ * calculates the step size for the Digital Differential Analyzer (DDA) 
+ * algorithm.
+ * 
+ * @param t_cub3d *cub       Pointer to the main game structure containing 
+ *                           player and map data.
+ * @param t_ray *ray         Pointer to the ray structure being initialized.
+ * 
+ * @return void              Initializes values related to ray movement and 
+ *                           interaction with the environment.
+ * 
+ * The function "ft_ray_init" initializes the field of view (FOV) and 
+ * calculates the angles for all rays emitted by the player.
+ * It assigns an initial angle to each ray, adjusting it according to the 
+ * player's current direction.
+ * 
+ * @param t_cub3d *cub       Pointer to the main game structure containing 
+ *                           player and raycasting information.
+ * 
+ * @return void              Updates the angles of the rays for raycasting.
+ * 
+ */
+
 void	ft_ray_init(t_cub3d *cub)
 {
 	int		i;

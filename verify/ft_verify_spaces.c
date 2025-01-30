@@ -101,7 +101,7 @@ int	ft_verify_spaces(char **map)
 	output = 0;
 	while (map[line][col])
 	{
-		j = 0;
+		col = 0;
 		while (map[line][col])
 		{
 			if (map[line][col] == 48 || map[line][col] == 'N' || \

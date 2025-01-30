@@ -12,6 +12,17 @@
 
 #include "../includes/cub3d.h"
 
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
 void	ft_wall_finder(t_cub3d *cub, t_ray *ray)
 {
 	while (cub->map.map[ray->y_map][ray->x_map] != '1')
@@ -74,7 +85,7 @@ void	ft_ray_impact(t_cub3d *cub, t_ray *ray)
 
 void	ft_raycasting(t_cub3d *cub, t_player *player)
 {
-	int i;
+	int	i;
 
 	ft_ray_init(cub);
 	i = 0;

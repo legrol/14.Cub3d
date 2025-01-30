@@ -12,6 +12,20 @@
 
 #include "../includes/cub3d.h"
 
+/**
+ * The function "ft_rendering" fills the screen background by rendering 
+ * the sky and floor colors.
+ * 
+ * It iterates through each pixel in the window, setting the top half to 
+ * the sky color and the bottom half to the floor color.
+ * 
+ * @param t_cub3d *cub		Pointer to the game structure containing textures 
+ * 							and rendering data.
+ * 
+ * @return int				Returns EXIT_SUCCESS after rendering is complete.
+ * 
+ */
+
 int	ft_rendering(t_cub3d *cub)
 {
 	int	w;
@@ -24,11 +38,13 @@ int	ft_rendering(t_cub3d *cub)
 		while (h < HEIGHT)
 		{
 			if (h < HEIGHT / 2)
-				mlx_put_pixel(cub->background, w, h++, cub->textures.sky_color);
+				mlx_put_pixel(cub->background, w, h++, \
+				cub->textures.sky_color);
 			else
-				mlx_put_pixel(cub->background, w, h++, cub->textures.floor_color);
+				mlx_put_pixel(cub->background, w, h++, \
+				cub->textures.floor_color);
 		}
 		w++;
 	}
-	return(printf(MLX_SUCCESS), EXIT_SUCCESS);
+	return (printf(MLX_SUCCESS), EXIT_SUCCESS);
 }

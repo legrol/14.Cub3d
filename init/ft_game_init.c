@@ -12,6 +12,26 @@
 
 #include "../includes/cub3d.h"
 
+/**
+ * The function "ft_game_init" starts the main game loop.
+ * It initializes the game environment and continuously updates the game state.
+ *
+ * @param t_cub3d *cub			Pointer to the game structure.
+ * 
+ * The function "ft_playing_mode" initializes the game window and rendering.
+ * It sets up the game environment, including walls, textures, and the 
+ * player's initial position.
+ *
+ * @param t_cub3d *cub			Pointer to the game structure.
+ * 
+ * The function "ft_callback" handles real-time updates in the game loop.
+ * It manages key inputs, updates movement and rotation, and triggers 
+ * the rendering process.
+ *
+ * @param void *value			A pointer to the game structure (t_cub3d).
+ * 
+ */
+
 void	ft_callback(void *value)
 {
 	t_cub3d	*cub;
@@ -19,7 +39,7 @@ void	ft_callback(void *value)
 	cub = value;
 	if (cub->player.ray[0].ray_dist_to_y)
 		mlx_delete_image(cub->mlx, cub->walls);
-	if (mlx_is_key_down(cub->mlx, MLX_KEY_ESCAPE))	
+	if (mlx_is_key_down(cub->mlx, MLX_KEY_ESCAPE))
 		mlx_close_window(cub->mlx);
 	ft_moves(cub);
 	ft_rotation(cub);
@@ -27,7 +47,7 @@ void	ft_callback(void *value)
 	ft_raycasting(cub, &cub->player);
 }
 
-void    ft_playing_mode(t_cub3d *cub)
+void	ft_playing_mode(t_cub3d *cub)
 {
 	cub->mlx = mlx_init(WIDTH, HEIGHT, "Cub3D", true);
 	mlx_set_cursor_mode(cub->mlx, MLX_MOUSE_DISABLED);
@@ -43,11 +63,10 @@ void    ft_playing_mode(t_cub3d *cub)
 	ft_rendering(cub);
 }
 
-void    ft_game_init(t_cub3d *cub)
+void	ft_game_init(t_cub3d *cub)
 {
 	ft_playing_mode(cub);
 	mlx_loop_hook(cub->mlx, ft_callback, cub);
 	mlx_loop(cub->mlx);
 	mlx_terminate(cub->mlx);
 }
-
