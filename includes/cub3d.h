@@ -140,9 +140,9 @@ typedef struct s_cub3d
 int				ft_analyzer(char *argv, t_cub3d *cub);
 int				ft_mapping(t_cub3d *cub, int fd);
 int				ft_checking_lines(char	*map);
-char			*ft_matrix_to_str(char	*c, int fd);
 int				ft_map_spliting(t_cub3d *cub, char *map);
 void			ft_map_dimensions(t_map *map);
+char			*ft_matrix_to_str(char	*c, int fd);
 
 // ============================================================================
 // Control functions
@@ -155,13 +155,12 @@ int				ft_ext_valid(char *map_name);
 // DataMaps functions
 // ============================================================================
 
-uint32_t		ft_walls_colors(t_cub3d *cub, t_ray *ray, double size);
+int				ft_control_colors(char **c);
+int				ft_control_colors_nbr(char **cell);
 unsigned int	ft_fetch_rgb(char **cell);
 int				ft_get_textures_data(t_cub3d *cub, int *flag, int *fd);
 int				ft_load_textures(t_cub3d *cub);
-unsigned int	ft_rgb_get(char **c); //PENDIENTE DE SABER QUE HACE ESTA FUNCION.
-int				ft_control_colors(char **c);
-int				ft_control_colors_nbr(char **cell, int line);
+uint32_t		ft_walls_colors(t_cub3d *cub, t_ray *ray, double size);
 
 // ============================================================================
 // Management errors
@@ -180,10 +179,10 @@ void			ft_players(int index);
 // Initialization functions
 // ============================================================================
 
-int				ft_setup(t_cub3d *structure);
-void			ft_init_walls(t_cub3d *structure, mlx_image_t **image);
+void			ft_init_walls(t_cub3d *structure, mlx_image_t *image);
 void			ft_game_init(t_cub3d *cub);
 void			ft_playing_mode(t_cub3d *cub);
+int				ft_setup(t_cub3d *structure);
 
 // ============================================================================
 // Utils functions
@@ -194,11 +193,11 @@ int				ft_count_col(char **str);
 void			ft_erase_textures(t_cub3d *cub);
 void			ft_free_textures(t_cub3d *cub);
 char			*ft_new_strjoin(char const *s1, char const *s2);
-char			*ft_trim_newline(char *str);
 char			*ft_realloc(char *hint, int lenght);
 void			*ft_split_clear(char **str);
 int				ft_split_len(char **str);
 int				ft_split_line(char ***cell, int fd);
+char			*ft_trim_newline(char *str);
 
 // ============================================================================
 // Verify functions
@@ -219,31 +218,33 @@ void			ft_player_position(t_cub3d *cub, char **map);
 // Calculations, movement and raycasting functions
 // ============================================================================
 
-void			ft_raycasting(t_cub3d *cub, t_player *player);
-void			ft_vert(t_cub3d *cub, t_ray *ray);
-void			ft_hypo(t_ray *ray);
-void			ft_horizontal_impact(t_ray *ray);
-void			ft_vertical_impact(t_ray *ray);
-void			ft_ray_impact(t_cub3d *cub, t_ray *ray);
-void			ft_wall_finder(t_cub3d *cub, t_ray *ray);
-void			ft_dist_player_to_wall(t_cub3d *cub, t_ray *ray);
-void			ft_init_ray_values(t_cub3d *cub, t_ray *ray);
-void			ft_rotation(t_cub3d *cub);
-void			ft_angles_checker(double *angle, double i);
 void			ft_angle(t_cub3d *cub, char cardinal);
-void			ft_ray_init(t_cub3d *cub);
-void			ft_moves(t_cub3d *cub);
-void			ft_movement(t_cub3d *cub, double angle);
+void			ft_angles_checker(double *angle, double i);
 bool			ft_check_next_step(t_cub3d *cub, double move_x, double move_y);
+void			ft_dist_player_to_wall(t_cub3d *cub, t_ray *ray);
+void			ft_horizontal_impact(t_ray *ray);
+void			ft_hypo(t_ray *ray);
+void			ft_init_ray_values(t_cub3d *cub, t_ray *ray);
+void			ft_painting_col(t_cub3d *cub, t_ray *ray, int c);
+void			ft_raycasting(t_cub3d *cub, t_player *player);
+void			ft_ray_impact(t_cub3d *cub, t_ray *ray);
+void			ft_ray_init(t_cub3d *cub);
+void			ft_rotation(t_cub3d *cub);
+void			ft_movement(t_cub3d *cub, double angle);
+void			ft_moves(t_cub3d *cub);
 bool			ft_valid_movement(t_cub3d *cub, double move_x, double move_y);
+void			ft_vert(t_cub3d *cub, t_ray *ray);
+void			ft_vertical_impact(t_ray *ray);
+void			ft_wall_finder(t_cub3d *cub, t_ray *ray);
 
 // ============================================================================
 // Rendering functions
 // ============================================================================
 
-uint32_t		ft_rgba(uint8_t pixel[4]);
-uint32_t		ft_get_the_colors(double x, double size, mlx_texture_t *texture);
+uint32_t		ft_get_the_colors(double x, double size, mlx_texture_t \
+				*texture);
 int				ft_rendering(t_cub3d *cub);
+uint32_t		ft_rgba(uint8_t pixel[4]);
 double			ft_wallsize(t_ray *ray);
 
 #endif

@@ -13,6 +13,21 @@
 #include "../includes/cub3d.h"
 
 /**
+ * The function "ft_walls_colors" determines the color of a wall pixel
+ * based on the direction of the ray and the corresponding texture.
+ * It selects the appropriate wall texture depending on the ray's hit direction 
+ * and retrieves the color from that texture.
+ * 
+ * @param t_cub3d *cub      A pointer to the game structure containing 
+ * 							textures.
+ * @param t_ray *ray        A pointer to the ray structure that stores ray 
+ *                          properties such as direction and hit distance.
+ * @param double size       The size of the texture sample to fetch the color.
+ * 
+ * @return uint32_t         Returns the color value (RGBA format) for the 
+ *                          given wall segment. If no match is found, it 
+ *                          returns a default color (0x33333388).
+ * 
  * The function "ft_fetch_rgb" determines the appropriate way to parse and
  * encode RGB values based on the input format. It supports two formats:
  * - Hexadecimal RGB strings ("R,G,B")
@@ -171,10 +186,12 @@ uint32_t	ft_walls_colors(t_cub3d *cub, t_ray *ray, double size)
 	{
 		if (ray->ray_y > 0)
 			c = ft_get_the_colors(ray->ray_hit_in_map_dist \
-				- (int)ray->ray_hit_in_map_dist, size, cub->textures.south_text);
+				- (int)ray->ray_hit_in_map_dist, size, \
+				cub->textures.south_text);
 		if (ray->ray_y < 0)
 			c = ft_get_the_colors(ray->ray_hit_in_map_dist \
-				- (int)ray->ray_hit_in_map_dist, size, cub->textures.north_text);
+				- (int)ray->ray_hit_in_map_dist, size, \
+				cub->textures.north_text);
 		return (c);
 	}
 	return (0x33333388);

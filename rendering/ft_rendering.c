@@ -13,16 +13,56 @@
 #include "../includes/cub3d.h"
 
 /**
- * The function "ft_rendering" fills the screen background by rendering 
- * the sky and floor colors.
+ * The function "ft_get_the_colors" extracts a pixel color from a texture 
+ * at a given coordinate.
  * 
- * It iterates through each pixel in the window, setting the top half to 
- * the sky color and the bottom half to the floor color.
+ * @param double x					The horizontal position in the texture (0-1 
+ * 									range).
+ * @param double size				The vertical position in the texture (0-1 
+ * 									range).
+ * @param mlx_texture_t *texture	Pointer to the texture containing pixel 
+ * 									data.
  * 
- * @param t_cub3d *cub		Pointer to the game structure containing textures 
- * 							and rendering data.
+ * @return uint32_t					Returns the extracted color in RGBA format.
  * 
- * @return int				Returns EXIT_SUCCESS after rendering is complete.
+ * The function "ft_rgba" converts four separate color channels (RGBA) into a 
+ * single uint32_t value.
+ * 
+ * @param uint8_t pixel[4]			An array containing the red, green, blue, 
+ *									and alpha components of a pixel.
+ * 
+ * @return uint32_t					Returns the combined RGBA color.
+ * 
+ * The function "ft_painting_col" paints a vertical column of the wall in the 
+ * game's render buffer.
+ * 
+ * @param t_cub3d *cub				A pointer to the game structure containing 
+ * 									textures.
+ * @param t_ray *ray				A pointer to the ray structure with wall 
+ * 									hit information.
+ * @param int c						The X-coordinate of the column being 
+ * 									painted.
+ * 
+ * The function "ft_wallsize" calculates the projected wall height on the 
+ * screen.
+ * It determines the smaller distance between the ray's hypotenuse distance and
+ * its vertical travel distance.
+ * 
+ * @param t_ray *ray				A pointer to the ray structure containing 
+ * 									distance data.
+ * 
+ * @return double					Returns the computed wall size to be used 
+ * 									for rendering.
+ * 
+ * The function "ft_rendering" fills the background with the sky and floor 
+ * colors.
+ * It iterates over each pixel in the window and applies the correct color.
+ * 
+ * @param t_cub3d *cub				A pointer to the game structure containing
+ * 									textures and rendering data.
+ * 
+ * @return int						Returns EXIT_SUCCESS after rendering the 
+ * 									background.
  * 
  */
 
@@ -65,7 +105,7 @@ void	ft_painting_col(t_cub3d *cub, t_ray *ray, int c)
 	double		size;
 	uint32_t	colors;
 	int			i;
-	int 		first_pixel;
+	int			first_pixel;
 	int			pixels;
 
 	i = 0;
@@ -82,7 +122,7 @@ void	ft_painting_col(t_cub3d *cub, t_ray *ray, int c)
 		{
 			colors = ft_walls_colors(cub, ray, \
 					(i - first_pixel + pixels) / size);
-			mlx_put_pixel(cub->walls, c, i, colors);	
+			mlx_put_pixel(cub->walls, c, i, colors);
 		}
 		i++;
 	}

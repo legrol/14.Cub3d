@@ -76,6 +76,7 @@ int	ft_load_textures(t_cub3d *cub)
 	cub->textures.west_text = mlx_load_png(cub->textures.west_path);
 	if (!cub->textures.west_text)
 		return (ft_manage_err(WEST_ERR), EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }
 
 static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
@@ -84,6 +85,7 @@ static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
 	int		i;
 	int		j;
 
+	(void) flag;
 	cell = NULL;
 	i = 0;
 	j = 0;

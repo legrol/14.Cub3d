@@ -131,7 +131,7 @@ int	ft_verify_img_data(char **cell, int row)
 		warning = 1;
 	if (ft_control_colors(cell))
 		warning = 1;
-	if (ft_control_colors_nbr(cell, row))
+	if (ft_control_colors_nbr(cell))
 		warning = 1;
 	return (warning);
 }
