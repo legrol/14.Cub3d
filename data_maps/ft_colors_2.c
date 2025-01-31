@@ -43,8 +43,6 @@
  * 
  * @param char **cell           A pointer to a 2D array of strings containing 
  *                              the RGB identifier and values.
- * @param int line              The line number being processed, used for 
- * 								error reporting.
  * 
  * @return int                  Returns EXIT_SUCCESS if all characters are 
  * 								valid.
@@ -53,7 +51,7 @@
  * 
  */
 
-int	ft_control_colors_nbr(char **cell, int line)
+int	ft_control_colors_nbr(char **cell)
 {
 	int	flag;
 	int	row;
