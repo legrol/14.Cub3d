@@ -13,13 +13,35 @@
 #include "../includes/cub3d.h"
 
 /**
+ * The function "ft_raycasting" casts rays for each column of the screen 
+ * to determine wall positions and render the scene accordingly.
+ *
+ * @param t_cub3d *cub				A pointer to the game structure.
+ * @param t_player *player			A pointer to the player structure, 
+ * 									containing rays.
  * 
+ * The function "ft_ray_impact" initializes ray properties, calculates wall 
+ * intersections, and determines the final impact point.
+ *
+ * @param t_cub3d *cub				A pointer to the game structure.
+ * @param t_ray *ray				A pointer to the ray structure containing 
+ * 									tracing data.
  * 
+ * The function "ft_dist_player_to_wall" calculates the initial distances to 
+ * the first grid intersection before starting DDA traversal.
+ *
+ * @param t_cub3d *cub				A pointer to the game structure.
+ * @param t_ray *ray				A pointer to the ray structure containing 
+ * 									tracing data.
  * 
- * 
- * 
- * 
- * 
+ * The function "ft_wall_finder" performs a DDA (Digital Differential Analysis) 
+ * algorithm to determine where the player's ray collides with a wall.
+ *
+ * It steps through the grid until it finds a '1' (wall).
+ *
+ * @param t_cub3d *cub				A pointer to the game structure.
+ * @param t_ray *ray				A pointer to the ray structure containing 
+ * 									tracing data.
  * 
  */
 

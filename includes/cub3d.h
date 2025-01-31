@@ -242,7 +242,8 @@ bool			ft_valid_movement(t_cub3d *cub, double move_x, double move_y);
 // ============================================================================
 
 uint32_t		ft_rgba(uint8_t pixel[4]);
-uint32_t		ft_get_the_colors(double x, double size, mlx_texture_t *texture);
+uint32_t		ft_get_the_colors(double x, double size, mlx_texture_t \
+				*texture);
 int				ft_rendering(t_cub3d *cub);
 double			ft_wallsize(t_ray *ray);
 

@@ -36,17 +36,21 @@ char	*ft_new_strjoin(char const *s1, char const *s2)
 {
 	size_t		totallen;
 	char		*buffer;
+	int			len_s1;
+	int			len_s2;
 
 	if (!s2)
 		return (s1);
 	if (!s1)
 		return (ft_strdup(s2));
-	totallen = ft_strlen(s1) + ft_strlen(s2);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	totallen = len_s1 + len_s2;
 	buffer = (char *)malloc(sizeof(char) * (totallen + 1));
 	if (!buffer)
 		return (NULL);
-	ft_memcpy(buffer, s1, ft_strlen(s1));
-	ft_memcpy(buffer + ft_strlen(s1), s2, ft_strlen(s2));
+	ft_memcpy(buffer, s1, len_s1);
+	ft_memcpy(buffer + len_s1, s2, len_s2);
 	buffer[totallen] = '\0';
 	free (s1);
 	return (buffer);
