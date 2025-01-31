@@ -30,6 +30,9 @@ int	ft_control_args(int argc, char **argv)
 		return (EXIT_FAILURE);
 	}
 	else if (!ft_ext_valid(argv[1]))
+	{
+		printf("error en la extension del mapa joder\n");
 		return (EXIT_FAILURE);
+	}
 	return (EXIT_SUCCESS);
 }

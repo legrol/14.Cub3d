@@ -86,7 +86,7 @@ int	ft_rendering(t_cub3d *cub)
 		}
 		w++;
 	}
-	return (printf(MLX_SUCCESS), EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
 
 double	ft_wallsize(t_ray *ray)
@@ -109,6 +109,7 @@ void	ft_painting_col(t_cub3d *cub, t_ray *ray, int c)
 	int			pixels;
 
 	i = 0;
+	first_pixel = 0;
 	pixels = 0;
 	size = ft_wallsize(ray);
 	if (first_pixel < 0)

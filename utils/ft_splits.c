@@ -66,7 +66,7 @@ int	ft_split_len(char **str)
 
 	i = 0;
 	if (!str)
-		return (NULL);
+		return (-1);
 	while (str[i])
 		i++;
 	return (i);

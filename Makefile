@@ -58,6 +58,8 @@ LIBFT_DIR			= libft
 PRINTFT_DIR			= printf
 EXAMFT_DIR			= examft
 INCLUDES_DIR		= ./includes
+MLX42_LIB           = ./MLX42/lib
+MLX42_INCLUDE       = ./MLX42/include
 
 # ══ Directories Bonus ═══════════════════════════════════════════════════════ #
 #    -----------                                                               #
@@ -69,15 +71,18 @@ INCLUDES_DIR		= ./includes
 LIBFT_A				= ${LIBRARIES}/${LIBFT_DIR}/libft.a
 PRINTFT_A			= ${LIBRARIES}/${PRINTFT_DIR}/libftprintf.a
 EXAMFT_A			= ${LIBRARIES}/${EXAMFT_DIR}/libexamft.a
+LIBMLX42_A          = ${MLX42_LIB}/libmlx42.a
 
 # ══ Flags ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
 
-CFLAGS 				= -Wall -Werror -Wextra
-IFLAGS				= -I${INCLUDES_DIR}
+CFLAGS 				= -Wall -Werror -Wextra -g
+IFLAGS				= -I${INCLUDES_DIR} -I${MLX42_INCLUDE}
 LFLAGS				= -L${LIBRARIES}/${LIBFT_DIR} -lft \
 						-L${LIBRARIES}/${PRINTFT_DIR} -lftprintf \
-						-L${LIBRARIES}/${EXAMFT_DIR} -lexamft -lreadline				
+						-L${LIBRARIES}/${EXAMFT_DIR} -lexamft -lreadline \
+						-L${MLX42_LIB} -lmlx42 -lglfw -ldl -lm -lpthread
+				
 
 # ══ Flags Bonus══════════════════════════════════════════════════════════════ #
 #    -----------                                                               #

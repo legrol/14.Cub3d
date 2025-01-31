@@ -192,7 +192,7 @@ void			ft_print_banner(void);
 int				ft_count_col(char **str);
 void			ft_erase_textures(t_cub3d *cub);
 void			ft_free_textures(t_cub3d *cub);
-char			*ft_new_strjoin(char const *s1, char const *s2);
+char			*ft_new_strjoin(char *s1, char *s2);
 char			*ft_realloc(char *hint, int lenght);
 void			*ft_split_clear(char **str);
 int				ft_split_len(char **str);

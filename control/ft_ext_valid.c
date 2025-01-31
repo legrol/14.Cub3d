@@ -25,15 +25,17 @@ int	ft_ext_valid(char *map_name)
 	int	size;
 
 	size = ft_strlen(map_name);
+	printf("Map name: %s, size: %d\n", map_name, size);
 	if (size < 4)
 	{
 		ft_manage_err(SHORT_NAME_ERR);
-		return (EXIT_SUCCESS);
+		return (EXIT_FAILURE);
 	}
+	printf("Last 4 chars: %s\n", map_name + size - 4);
 	if ((ft_strncmp(map_name + size - 4, ".cub", 4) != 0))
 	{
 		ft_manage_err(EXT_ERR);
-		return (EXIT_SUCCESS);
+		return (EXIT_FAILURE);
 	}
-	return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }

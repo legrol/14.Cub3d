@@ -97,6 +97,7 @@ int	ft_verify_spaces(char **map)
 	int	col;
 	int	output;
 
+	col = 0;
 	line = 0;
 	output = 0;
 	while (map[line][col])
