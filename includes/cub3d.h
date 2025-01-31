@@ -159,7 +159,7 @@ uint32_t		ft_walls_colors(t_cub3d *cub, t_ray *ray, double size);
 unsigned int	ft_fetch_rgb(char **cell);
 int				ft_get_textures_data(t_cub3d *cub, int *flag, int *fd);
 int				ft_load_textures(t_cub3d *cub);
-unsigned int	ft_rgb_get(char **c);
+unsigned int	ft_rgb_get(char **c); //PENDIENTE DE SABER QUE HACE ESTA FUNCION.
 int				ft_control_colors(char **c);
 int				ft_control_colors_nbr(char **cell, int line);
 
