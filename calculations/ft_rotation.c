@@ -63,7 +63,7 @@ void	ft_angles_checker(double *angle, double i)
 	if (*angle >= 360)
 		*angle -= 360;
 	if (*angle < 0)
-		*angle += 360; 
+		*angle += 360;
 }
 
 void	ft_rotation(t_cub3d *cub)
