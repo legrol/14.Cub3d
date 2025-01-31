@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 17:58:34 by drosales          #+#    #+#             */
-/*   Updated: 2025/01/27 21:10:24 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:21:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_callback(void *value)
 		mlx_close_window(cub->mlx);
 	ft_moves(cub);
 	ft_rotation(cub);
-	ft_init_walls(cub, &cub->walls);
+	ft_init_walls(cub, cub->walls);
 	ft_raycasting(cub, &cub->player);
 }
 
