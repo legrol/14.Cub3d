@@ -93,14 +93,9 @@ int	ft_rendering(t_cub3d *cub)
 
 double	ft_wallsize(t_ray *ray)
 {
-	double	size;
-
-	if (ray->ray_hypoteneuse_dist < ray->vertical_ray_travel)
-		size = (WIDTH / ray->ray_hypoteneuse_dist);
-	else
-		size = (WIDTH / ray->vertical_ray_travel);
-	return (size);
+    return (HEIGHT / ray->wall_ray_hit_dist);
 }
+
 
 void	ft_painting_col(t_cub3d *cub, t_ray *ray, int c)
 {
@@ -111,9 +106,9 @@ void	ft_painting_col(t_cub3d *cub, t_ray *ray, int c)
 	int			pixels;
 
 	i = 0;
-	first_pixel = 0;
 	pixels = 0;
 	size = ft_wallsize(ray);
+	first_pixel = ((HEIGHT / 2) - (size / 2));
 	if (first_pixel < 0)
 	{
 		pixels = -first_pixel;

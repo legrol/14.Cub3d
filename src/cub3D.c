@@ -45,8 +45,7 @@ int	main(int argc, char **argv)
 		ft_free_textures(&cub);
 		return (EXIT_FAILURE);
 	}
-	if (ft_load_textures(&cub))
-		return (EXIT_FAILURE);
+	ft_load_textures(&cub);
 	ft_game_init(&cub);
 	// printf("Continuo tras game_init\n");  //QUITAR TRAS DEBUG
 	ft_split_clear(cub.map.map);

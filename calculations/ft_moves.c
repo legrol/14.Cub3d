@@ -94,7 +94,7 @@ void	ft_movement(t_cub3d *cub, double angle)
 	move_x = (cos(angle * M_PI / 180) * cub->move);
 	move_y = (sin(angle * M_PI / 180) * cub->move);
 	if (ft_check_next_step(cub, 0, move_y))
-		cub->player.y_player_pos *= move_y / 64;
+		cub->player.y_player_pos += move_y / 64;
 	if (ft_check_next_step(cub, move_x, 0))
 		cub->player.x_player_pos += move_x / 64;
 }

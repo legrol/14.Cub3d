@@ -49,7 +49,7 @@ void	ft_wall_finder(t_cub3d *cub, t_ray *ray)
 {
 	while (cub->map.map[ray->y_map][ray->x_map] != '1')
 	{
-		if (ray->cell_crossing_dist_x < ray->current_side_dist_y)
+		if (ray->cell_crossing_dist_x < ray->cell_crossing_dist_y)
 		{
 			ray->cell_crossing_dist_x += ray->ray_dist_to_x;
 			ray->x_map += ray->ray_move_x;

@@ -108,15 +108,15 @@ void	ft_setup(t_cub3d *structure)
 	structure->ray_number = 0;
 }
 
-void	ft_init_walls(t_cub3d *structure, mlx_image_t *image)
+void	ft_init_walls(t_cub3d *structure, mlx_image_t **image)
 {
-	image = mlx_new_image(structure->mlx, WIDTH, HEIGHT);
-	if (!image)
+	*image = mlx_new_image(structure->mlx, WIDTH, HEIGHT);
+	if (!*image)
 	{
 		ft_manage_err(FLOOR_OR_SKY_ERR);
 		exit (EXIT_FAILURE); //PROHIBIDO, REFORMULAR?
 	}
-	if (mlx_image_to_window(structure->mlx, image, 0, 0) == -1)
+	if (mlx_image_to_window(structure->mlx, *image, 0, 0) == -1)
 	{
 		ft_manage_err(IMG_TO_WINDOW_ERR);
 		exit (EXIT_FAILURE); //PROHIBIDO, REFORMULAR?

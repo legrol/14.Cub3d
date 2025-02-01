@@ -76,32 +76,24 @@ void	ft_rotation(t_cub3d *cub)
 
 void	ft_vertical_impact(t_ray *ray)
 {
-	if (ray->ray_x > 0 && ray->ray_y >= 0)
-		ray->wall_visible_height = (ray->ray_hit_in_map_dist - ray->y_map) \
-		* 1920;
-	else if (ray->ray_x <= 0 && ray->ray_y > 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->y_map) \
-		* 1920;
-	else if (ray->ray_x >= 0 && ray->ray_y < 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->y_map) \
-		* 1920;
-	else if (ray->ray_x < 0 && ray->ray_y <= 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->y_map) \
-		* 1920;
+    if (ray->ray_x > 0 && ray->ray_y >= 0)
+        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+    else if (ray->ray_x <= 0 && ray->ray_y > 0)
+        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+    else if (ray->ray_x >= 0 && ray->ray_y < 0)
+        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+    else if (ray->ray_x < 0 && ray->ray_y <= 0)
+        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
 }
 
 void	ft_horizontal_impact(t_ray *ray)
 {
 	if (ray->ray_x > 0 && ray->ray_y >= 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->x_map) \
-		* 1920;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
 	else if (ray->ray_x <= 0 && ray->ray_y > 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->x_map) \
-		* 1920;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
 	else if (ray->ray_x >= 0 && ray->ray_y < 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->x_map) \
-		* 1920;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
 	else if (ray->ray_x < 0 && ray->ray_y <= 0)
-		ray->wall_ray_hit_dist = (ray->ray_hit_in_map_dist - ray->x_map) \
-		* 1920;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
 }

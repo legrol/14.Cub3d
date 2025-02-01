@@ -43,13 +43,12 @@ void	ft_callback(void *value)
 		mlx_close_window(cub->mlx);
 	ft_moves(cub);
 	ft_rotation(cub);
-	ft_init_walls(cub, cub->walls);
+	ft_init_walls(cub, &cub->walls);
 	ft_raycasting(cub, &cub->player);
 }
 
 void	ft_playing_mode(t_cub3d *cub)
 {
-	// printf("Entro en playing_mode\n");  //QUITAR TRAS DEBUG
 	cub->mlx = mlx_init(WIDTH, HEIGHT, "Cub3D", true);
 	mlx_set_cursor_mode(cub->mlx, MLX_MOUSE_DISABLED);
 	if (!cub->mlx)
@@ -57,8 +56,8 @@ void	ft_playing_mode(t_cub3d *cub)
 		ft_manage_err(MLX_INIT_ERR);
 		return ;
 	}
-	ft_init_walls(cub, cub->background);
-	ft_init_walls(cub, cub->walls);
+	ft_init_walls(cub, &cub->background);
+	ft_init_walls(cub, &cub->walls);
 	cub->move = 4;
 	ft_player_position(cub, cub->map.map);
 	ft_rendering(cub);
@@ -66,9 +65,7 @@ void	ft_playing_mode(t_cub3d *cub)
 
 void	ft_game_init(t_cub3d *cub)
 {
-	// printf("Entro en game_init\n");  //QUITAR TRAS DEBUG
 	ft_playing_mode(cub);
-	// printf("Salgo de playing_mode y gestiono mlx\n");  //QUITAR TRAS DEBUG
 	mlx_loop_hook(cub->mlx, ft_callback, cub);
 	mlx_loop(cub->mlx);
 	mlx_terminate(cub->mlx);

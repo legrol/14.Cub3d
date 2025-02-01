@@ -28,11 +28,11 @@
 void	ft_angle(t_cub3d *cub, char cardinal)
 {
 	if (cardinal == 'N')
-		cub->player.angle = 270;
-	if (cardinal == 'S')
 		cub->player.angle = 90;
-	if (cardinal == 'W')
-		cub->player.angle = 180;
+	if (cardinal == 'S')
+		cub->player.angle = 270;
 	if (cardinal == 'E')
 		cub->player.angle = 0;
+	if (cardinal == 'W')
+		cub->player.angle = 180;
 }
