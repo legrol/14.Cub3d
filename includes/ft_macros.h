@@ -81,11 +81,11 @@
 # define SOUTH_ERR				"🌎 Error loading image of South Wall..."
 # define EAST_ERR				"🌎 Error loading image of East Wall..."
 # define WEST_ERR				"🌎 Error loading image of West Wall..."
-# define CEIL					67
-# define FLOOR					70
-# define NORTH					78
-# define SOUTH					83
-# define EAST					69
-# define WEST					87
+# define CEIL					"CEILING"
+# define FLOOR					"FLOOR"
+# define NORTH					"NORTH"
+# define SOUTH					"SOUTH"
+# define EAST					"EAST"
+# define WEST					"WEST"
 
 #endif

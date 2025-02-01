@@ -32,7 +32,7 @@
  * 
  */
 
-char	*ft_new_strjoin(char const *s1, char const *s2)
+char	*ft_new_strjoin(char *s1, char *s2)
 {
 	size_t		totallen;
 	char		*buffer;

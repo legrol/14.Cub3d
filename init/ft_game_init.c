@@ -54,7 +54,7 @@ void	ft_playing_mode(t_cub3d *cub)
 	if (!cub->mlx)
 	{
 		ft_manage_err(MLX_INIT_ERR);
-		return (EXIT_FAILURE);
+		return;
 	}
 	ft_init_walls(cub, cub->background);
 	ft_init_walls(cub, cub->walls);

@@ -115,6 +115,6 @@ int	ft_verify_closure(t_cub3d *details)
 	if (ft_verify_sides(details->map.map))
 		output = 1;
 	if (output == 1)
-		reutrn (EXIT_FAILURE);
+		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

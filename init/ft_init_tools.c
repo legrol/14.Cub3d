@@ -37,8 +37,8 @@ void	ft_player_position(t_cub3d *cub, char **map)
 		y = 0;
 		while (map[x][y])
 		{
-			if (map[x][y] == NORTH || map[x][y] == SOUTH \
-				|| map[x][y] == WEST || map[x][y] == EAST)
+			if (map[x][y] == 'N' || map[x][y] == 'S' \
+				|| map[x][y] == 'W' || map[x][y] == 'E')
 			{
 				cell = map[x][y];
 				cub->player.x_player_pos = y + 0.5;
