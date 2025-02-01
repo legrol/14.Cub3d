@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 18:16:06 by drosales          #+#    #+#             */
-/*   Updated: 2025/01/27 21:08:21 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:38:11 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ static void	ft_init_textures(t_cub3d *structure)
 	structure->textures.floor_color = 0;
 }
 
-int	ft_setup(t_cub3d *structure)
+void	ft_setup(t_cub3d *structure)
 {
 	ft_init_textures(structure);
 	ft_init_player(structure);
@@ -106,7 +106,6 @@ int	ft_setup(t_cub3d *structure)
 	structure->walls = NULL;
 	structure->move = 0;
 	structure->ray_number = 0;
-	return (EXIT_SUCCESS);
 }
 
 void	ft_init_walls(t_cub3d *structure, mlx_image_t *image)

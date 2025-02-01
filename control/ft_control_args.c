@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:33:56 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 12:58:09 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:36:15 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ int	ft_control_args(int argc, char **argv)
 		ft_manage_err(NUM_ARGV_ERR);
 		return (EXIT_FAILURE);
 	}
-	else if (!ft_ext_valid(argv[1]))
-	{
-		printf("error en la extension del mapa joder\n");
+	else if (ft_ext_valid(argv[1]))
 		return (EXIT_FAILURE);
-	}
 	return (EXIT_SUCCESS);
 }

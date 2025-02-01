@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rendering.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: drosales <drosales@student.42.fr>          #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-28 18:39:32 by drosales          #+#    #+#             */
-/*   Updated: 2025-01-28 18:39:32 by drosales         ###   ########.fr       */
+/*   Created: 2025/01/28 18:39:32 by drosales          #+#    #+#             */
+/*   Updated: 2025/02/01 14:29:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int	ft_rendering(t_cub3d *cub)
 	int	h;
 
 	w = 0;
+	printf("Entro en ft_rendering\n");  //QUITAR TRAS DEBUG
 	while (w < WIDTH)
 	{
 		h = 0;
@@ -86,6 +87,7 @@ int	ft_rendering(t_cub3d *cub)
 		}
 		w++;
 	}
+	printf("Salgo bien de ft_rendering\n");  //QUITAR TRAS DEBUG
 	return (EXIT_SUCCESS);
 }
 

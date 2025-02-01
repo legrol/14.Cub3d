@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/28 13:14:12 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/01 13:42:02 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@
 								one."
 # define SHORT_NAME_ERR			"🗺️ Map name is very short!!!"
 # define EXT_ERR				"❌ⓔⓧⓣ File extension error!!!"
+# define INIT_MAP_ERR			"🌎 Error initializing map!!!"
 # define FLOOR_OR_SKY_ERR		"❗Error rendering the ground or the \
 								sky."
 # define IMG_TO_WINDOW_ERR		"❗Error in function while rendering \

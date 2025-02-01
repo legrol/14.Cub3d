@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 17:58:34 by drosales          #+#    #+#             */
-/*   Updated: 2025/01/31 20:01:15 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:37:57 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,13 @@ void	ft_callback(void *value)
 
 void	ft_playing_mode(t_cub3d *cub)
 {
+	// printf("Entro en playing_mode\n");  //QUITAR TRAS DEBUG
 	cub->mlx = mlx_init(WIDTH, HEIGHT, "Cub3D", true);
 	mlx_set_cursor_mode(cub->mlx, MLX_MOUSE_DISABLED);
 	if (!cub->mlx)
 	{
 		ft_manage_err(MLX_INIT_ERR);
-		return;
+		return ;
 	}
 	ft_init_walls(cub, cub->background);
 	ft_init_walls(cub, cub->walls);
@@ -65,7 +66,9 @@ void	ft_playing_mode(t_cub3d *cub)
 
 void	ft_game_init(t_cub3d *cub)
 {
+	// printf("Entro en game_init\n");  //QUITAR TRAS DEBUG
 	ft_playing_mode(cub);
+	// printf("Salgo de playing_mode y gestiono mlx\n");  //QUITAR TRAS DEBUG
 	mlx_loop_hook(cub->mlx, ft_callback, cub);
 	mlx_loop(cub->mlx);
 	mlx_terminate(cub->mlx);

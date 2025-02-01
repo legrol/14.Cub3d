@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 20:15:54 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/17 23:03:35 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:43:55 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,28 +93,27 @@ static int	ft_verify_spaces_aux(char **map, int line, int col, int output)
 
 int	ft_verify_spaces(char **map)
 {
-	int	line;
-	int	col;
+	int	x;
+	int	y;
 	int	output;
 
-	col = 0;
-	line = 0;
+	x = 0;
+	y = 0;
 	output = 0;
-	while (map[line][col])
+	while (map[x][y])
 	{
-		col = 0;
-		while (map[line][col])
+		y = 0;
+		while (map[x][y])
 		{
-			if (map[line][col] == 48 || map[line][col] == 'N' || \
-			map[line][col] == 'S' || map[line][col] == 'E' || map[line][col] \
-			== 'W')
+			if (map[x][y] == 48 || map[x][y] == 'N' || map[x][y] == 'S' \
+			|| map[x][y] == 'E' || map[x][y] == 'W')
 			{
-				output = ft_verify_spaces_aux(map, line, col, output);
-				output = ft_verify_spaces_aux_2(map, line, col, output);
+				output = ft_verify_spaces_aux(map, x, y, output);
+				output = ft_verify_spaces_aux_2(map, x, y, output);
 			}
-			col++;
+			y++;
 		}
-		line++;
+		x++;
 	}
 	if (output == 1)
 		return (EXIT_FAILURE);
