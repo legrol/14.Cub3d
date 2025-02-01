@@ -109,8 +109,9 @@ void	ft_moves(t_cub3d *cub)
 		ft_movement(cub, cub->player.angle - 90);
 	if (mlx_is_key_down(cub->mlx, MLX_KEY_D))
 		ft_movement(cub, cub->player.angle + 90);
+	ft_rotation(cub);
 	if (mlx_is_key_down(cub->mlx, MLX_KEY_E))
 		cub->move = 12;
 	if (!mlx_is_key_down(cub->mlx, MLX_KEY_E))
-		cub->move = 4;
+		cub->move = 6;
 }
