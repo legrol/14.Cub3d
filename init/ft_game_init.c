@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 17:58:34 by drosales          #+#    #+#             */
-/*   Updated: 2025/02/01 14:37:57 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/02 18:25:09 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
  * 
  */
 
-void	ft_callback(void *value)
+static void	ft_callback(void *value)
 {
 	t_cub3d	*cub;
 

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:39:32 by drosales          #+#    #+#             */
-/*   Updated: 2025/02/01 14:29:37 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/02 18:27:09 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,18 +61,14 @@
  * @param t_cub3d *cub				A pointer to the game structure containing
  * 									textures and rendering data.
  * 
- * @return int						Returns EXIT_SUCCESS after rendering the 
- * 									background.
- * 
  */
 
-int	ft_rendering(t_cub3d *cub)
+void	ft_rendering(t_cub3d *cub)
 {
 	int	w;
 	int	h;
 
 	w = 0;
-	printf("Entro en ft_rendering\n");  //QUITAR TRAS DEBUG
 	while (w < WIDTH)
 	{
 		h = 0;
@@ -87,15 +83,12 @@ int	ft_rendering(t_cub3d *cub)
 		}
 		w++;
 	}
-	printf("Salgo bien de ft_rendering\n");  //QUITAR TRAS DEBUG
-	return (EXIT_SUCCESS);
 }
 
 double	ft_wallsize(t_ray *ray)
 {
-    return (HEIGHT / ray->wall_ray_hit_dist);
+	return (HEIGHT / ray->wall_ray_hit_dist);
 }
-
 
 void	ft_painting_col(t_cub3d *cub, t_ray *ray, int c)
 {

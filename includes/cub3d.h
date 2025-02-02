@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:35:15 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/01 13:44:25 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/02 18:27:51 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,10 +138,10 @@ typedef struct s_cub3d
 // ============================================================================
 
 int				ft_analyzer(char *argv, t_cub3d *cub);
-int				ft_mapping(t_cub3d *cub, int fd);
 int				ft_checking_lines(char	*map);
-int				ft_map_spliting(t_cub3d *cub, char *map);
+int				ft_mapping(t_cub3d *cub, int fd);
 void			ft_map_dimensions(t_map *map);
+int				ft_map_spliting(t_cub3d *cub, char *map);
 char			*ft_matrix_to_str(char	*c, int fd);
 
 // ============================================================================
@@ -188,11 +188,11 @@ void			ft_setup(t_cub3d *structure);
 // Utils functions
 // ============================================================================
 
-void			ft_print_banner(void);
 int				ft_count_col(char **str);
 void			ft_erase_textures(t_cub3d *cub);
 void			ft_free_textures(t_cub3d *cub);
 char			*ft_new_strjoin(char *s1, char *s2);
+void			ft_print_banner(void);
 char			*ft_realloc(char *hint, int lenght);
 void			*ft_split_clear(char **str);
 int				ft_split_len(char **str);
@@ -243,7 +243,7 @@ void			ft_wall_finder(t_cub3d *cub, t_ray *ray);
 
 uint32_t		ft_get_the_colors(double x, double size, mlx_texture_t \
 				*texture);
-int				ft_rendering(t_cub3d *cub);
+void			ft_rendering(t_cub3d *cub);
 uint32_t		ft_rgba(uint8_t pixel[4]);
 double			ft_wallsize(t_ray *ray);
 

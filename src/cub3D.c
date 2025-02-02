@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:24:06 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/01 14:35:11 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/02 18:24:25 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int	main(int argc, char **argv)
 	if (ft_control_args(argc, argv))
 		return (EXIT_FAILURE);
 	ft_setup(&cub);
-	// if (ft_verify_map(&cub))
-	// 	return (ft_manage_err(INIT_MAP_ERR), EXIT_FAILURE); //CONTROL Y BORRAR
 	if (ft_analyzer(argv[1], &cub))
 	{
 		if (cub.map.map)
@@ -47,7 +45,6 @@ int	main(int argc, char **argv)
 	}
 	ft_load_textures(&cub);
 	ft_game_init(&cub);
-	// printf("Continuo tras game_init\n");  //QUITAR TRAS DEBUG
 	ft_split_clear(cub.map.map);
 	ft_free_textures(&cub);
 	ft_erase_textures(&cub);

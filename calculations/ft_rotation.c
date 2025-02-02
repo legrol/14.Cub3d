@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rotation.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: drosales <drosales@student.42.fr>          #+#  +:+       +#+        */
+/*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-29 17:16:27 by drosales          #+#    #+#             */
-/*   Updated: 2025-01-29 17:16:27 by drosales         ###   ########.fr       */
+/*   Created: 2025/01/29 17:16:27 by drosales          #+#    #+#             */
+/*   Updated: 2025/02/02 15:07:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,24 +76,32 @@ void	ft_rotation(t_cub3d *cub)
 
 void	ft_vertical_impact(t_ray *ray)
 {
-    if (ray->ray_x > 0 && ray->ray_y >= 0)
-        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
-    else if (ray->ray_x <= 0 && ray->ray_y > 0)
-        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
-    else if (ray->ray_x >= 0 && ray->ray_y < 0)
-        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
-    else if (ray->ray_x < 0 && ray->ray_y <= 0)
-        ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+	if (ray->ray_x > 0 && ray->ray_y >= 0)
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
+	else if (ray->ray_x <= 0 && ray->ray_y > 0)
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
+	else if (ray->ray_x >= 0 && ray->ray_y < 0)
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
+	else if (ray->ray_x < 0 && ray->ray_y <= 0)
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
 }
 
 void	ft_horizontal_impact(t_ray *ray)
 {
 	if (ray->ray_x > 0 && ray->ray_y >= 0)
-		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
 	else if (ray->ray_x <= 0 && ray->ray_y > 0)
-		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
 	else if (ray->ray_x >= 0 && ray->ray_y < 0)
-		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
 	else if (ray->ray_x < 0 && ray->ray_y <= 0)
-		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * HEIGHT / ray->ray_hypoteneuse_dist;
+		ray->wall_visible_height = (ray->ray_hypoteneuse_dist) * \
+		HEIGHT / ray->ray_hypoteneuse_dist;
 }
