@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:19:33 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/01 13:22:03 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/02 18:37:07 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,11 @@ int	ft_ext_valid(char *map_name)
 	int	size;
 
 	size = ft_strlen(map_name);
-	// printf("Map name: %s, size: %d\n", map_name, size);  //QUITAR TRAS DEBUG
 	if (size < 4)
 	{
 		ft_manage_err(SHORT_NAME_ERR);
 		return (EXIT_FAILURE);
 	}
-	// printf("Last 4 chars: %s\n", map_name + size - 4);  //QUITAR TRAS DEBUG
 	if ((ft_strncmp(map_name + size - 4, ".cub", 4) != 0))
 	{
 		ft_manage_err(EXT_ERR);
