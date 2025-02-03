@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:21:03 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/18 19:46:03 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 13:54:58 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	ft_invalid_char(char **map, int line, int pos)
 	YELLOW CHAR1_ERR "\"" RESET BLUE "%c" RESET YELLOW "\" ...\n" RESET, \
 	letter);
 	ft_printf(YELLOW CHAR2_ERR RESET RED "%i" RESET YELLOW CHAR3_ERR RESET \
-	RED "%i" RESET YELLOW "." RESET, line + 1, pos + 1);
+	RED "%i" RESET YELLOW "." RESET "\n", line + 1, pos + 1);
 }
 
 void	ft_invalid_side(int line, int warning)
@@ -113,7 +113,7 @@ void	ft_forbidden_space(int line, int col)
 void	ft_players(int index)
 {
 	if (index == 0)
-		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_0_ERR RESET);
+		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_0_ERR RESET "\n");
 	if (index > 1)
-		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_NO1_ERR RESET);
+		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_NO1_ERR RESET "\n");
 }

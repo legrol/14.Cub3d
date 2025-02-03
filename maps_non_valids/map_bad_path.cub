@@ -1,7 +1,7 @@
-S ./images/wall_01.png
-W ./images/wall_02.png
-E ./images/wall_03.png
-N ./img/wall_05.png
+SO ./img/wall_01.png
+WE ./img/wall_02.png
+EA ./images/wall_03.png
+NO ./img/wall_04.png
 
 C 9, 24, 51
 F 48, 27, 104

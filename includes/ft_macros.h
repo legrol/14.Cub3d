@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/01 13:42:02 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 13:46:50 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@
 # define INIT_ERR				"42Cub3d say: "
 # define ARROW					"==> "
 # define NUM_ARGV_ERR			"❗1️⃣ Incorrect number of arguments, expected \
-								one."
+one."
 # define SHORT_NAME_ERR			"🗺️ Map name is very short!!!"
 # define EXT_ERR				"❌ⓔⓧⓣ File extension error!!!"
 # define INIT_MAP_ERR			"🌎 Error initializing map!!!"
 # define FLOOR_OR_SKY_ERR		"❗Error rendering the ground or the \
-								sky."
+sky."
 # define IMG_TO_WINDOW_ERR		"❗Error in function while rendering \
-								process."
+process."
 # define INV_CHAR_ERR			"❗Invalid character in first line."
 # define INV_CHAR2_ERR			"❗Invalid character in last line."
 # define CHAR1_ERR				"❌ⓒⓗⓐⓡ Wrong character "
@@ -55,9 +55,9 @@
 # define FORB_SPC2_ERR			"on the line "
 # define PLAYERS_0_ERR			"❗No player on the map. There must be one."
 # define PLAYERS_NO1_ERR		"❗Too many players on the map. There must be \
-								one."
+one."
 # define MLX_INIT_ERR			"❗Error, MLX isn´t working correctly!!!"
-# define OPEN_TEXTURE_ERR		"📖 Error, could not open texture filee!!!"
+# define OPEN_TEXTURE_ERR		"📖 Error, could not open texture file!!!"
 # define OPEN_ERR				"📖 Error opening source file!!!"
 # define CLOSED_ERR				"📚 Error closing source file!!!"
 # define OPEN_MAP_ERR			"🗺️ Error opening map."

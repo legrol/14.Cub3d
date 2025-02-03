@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 19:23:43 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/26 22:04:26 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:06:37 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
  * 
  * The function "ft_verify_cardinals" validates the identifier in the 
  * configuration file. It checks if the identifier matches one of the expected 
- * cardinal directions ("N", "S", "E", "W") or color indicators ("C", "F").
+ * cardinal directions ("NO", "SO", "EA", "WE") or color indicators ("C", "F").
  * 
  * @param char **cell           A 2D array of strings containing the texture 
  * 								or color identifier.
@@ -65,7 +65,7 @@
  * identifiers, as they represent colors instead of files.
  * 
  * @param char *file            The identifier of the texture or color 
- * 								(e.g., "N", "S", "C").
+ * 								(e.g., "F", "C").
  * @param char *image           The file path to the texture image.
  * 
  * @return int                  Returns EXIT_SUCCESS if the file can be 
@@ -109,8 +109,8 @@ static int	ft_verify_path(char **cell, int row)
 
 static int	ft_verify_cardinals(char **cell)
 {
-	if (ft_strcmp(cell[0], "N") && ft_strcmp(cell[0], "S") \
-	&& ft_strcmp(cell[0], "E") && ft_strcmp(cell[0], "W") \
+	if (ft_strcmp(cell[0], "NO") && ft_strcmp(cell[0], "SO") \
+	&& ft_strcmp(cell[0], "EA") && ft_strcmp(cell[0], "WE") \
 	&& ft_strcmp(cell[0], "C") && ft_strcmp(cell[0], "F"))
 		return (ft_manage_err(IDENT3_ERR), EXIT_FAILURE);
 	return (EXIT_SUCCESS);
