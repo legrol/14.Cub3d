@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:02:49 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/03 12:00:49 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:33:50 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@
 
 static int	ft_verify_chars(char c)
 {
-	if (c != 'N' && c != 'S' && c != 'E' && c != 'W' && \
-		c != 10 && c != 32 && c != 48 && c != 49)
+	if (c != NORTH_LETTER && c != SOUTH_LETTER && c != EAST_LETTER && \
+	c != WEST_LETTER && c != 10 && c != 32 && c != 48 && c != 49)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
