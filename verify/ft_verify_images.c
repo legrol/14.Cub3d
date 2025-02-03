@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 19:23:43 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/03 12:06:37 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 20:12:54 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static int	ft_verify_open_file(char *file, char *image)
 {
 	int	fd;
 
-	if (!ft_strcmp(file, "C") || !ft_strcmp(file, "F"))
+	if (!ft_strcmp(file, CEIL_MIN) || !ft_strcmp(file, FLOOR_MIN))
 		return (EXIT_SUCCESS);
 	fd = open(image, O_RDONLY);
 	if (fd < 0)
@@ -90,8 +90,8 @@ static int	ft_verify_open_file(char *file, char *image)
 
 static int	ft_verify_arguments(char **cell)
 {
-	if (cell && cell[2] && ft_strcmp(cell[0], "C") \
-	&& ft_strcmp(cell[0], "F") && cell[0][0] != '1')
+	if (cell && cell[2] && ft_strcmp(cell[0], CEIL_MIN) \
+	&& ft_strcmp(cell[0], FLOOR_MIN) && cell[0][0] != '1')
 		return (ft_manage_err(ARG_FILE_ERR), EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
@@ -109,9 +109,9 @@ static int	ft_verify_path(char **cell, int row)
 
 static int	ft_verify_cardinals(char **cell)
 {
-	if (ft_strcmp(cell[0], "NO") && ft_strcmp(cell[0], "SO") \
-	&& ft_strcmp(cell[0], "EA") && ft_strcmp(cell[0], "WE") \
-	&& ft_strcmp(cell[0], "C") && ft_strcmp(cell[0], "F"))
+	if (ft_strcmp(cell[0], NORTH_ABBREV) && ft_strcmp(cell[0], SOUTH_ABBREV) \
+	&& ft_strcmp(cell[0], EAST_ABBREV) && ft_strcmp(cell[0], WEST_ABBREV) \
+	&& ft_strcmp(cell[0], CEIL_MIN) && ft_strcmp(cell[0], FLOOR_MIN))
 		return (ft_manage_err(IDENT3_ERR), EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

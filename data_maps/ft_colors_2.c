@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 18:17:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/26 20:51:35 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 20:17:56 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_control_colors_nbr(char **cell)
 
 	row = 1;
 	flag = 0;
-	if (ft_strcmp(cell[0], "F") && ft_strcmp(cell[0], "C"))
+	if (ft_strcmp(cell[0], FLOOR_MIN) && ft_strcmp(cell[0], CEIL_MIN))
 		return (EXIT_SUCCESS);
 	while (cell[row])
 	{
@@ -104,7 +104,7 @@ static int	ft_comma_counter(char **cell)
 
 int	ft_control_colors(char **cell)
 {
-	if (ft_strcmp(cell[0], "C") && ft_strcmp(cell[0], "F"))
+	if (ft_strcmp(cell[0], CEIL_MIN) && ft_strcmp(cell[0], FLOOR_MIN))
 		return (EXIT_SUCCESS);
 	if (ft_split_len(cell) == 2 && ft_comma_counter(cell) == 2)
 		return (EXIT_SUCCESS);

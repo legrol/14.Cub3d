@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 16:59:13 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/03 12:01:15 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:02:12 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ static int	ft_count_players(char **map)
 		j = 0;
 		while (map[i][j])
 		{
-			if (map[i][j] == 'N' || map[i][j] == 'S' || map[i][j] == 'W' \
-			|| map[i][j] == 'E')
+			if (map[i][j] == NORTH_LETTER || map[i][j] == SOUTH_LETTER || \
+			map[i][j] == WEST_LETTER || map[i][j] == EAST_LETTER)
 				count++;
 			j++;
 		}

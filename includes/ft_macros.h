@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/03 13:46:50 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 20:35:22 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,19 @@ one."
 # define SOUTH					"SOUTH"
 # define EAST					"EAST"
 # define WEST					"WEST"
+# define NORTH_MIN				"N"
+# define SOUTH_MIN				"S"
+# define EAST_MIN				"E"
+# define WEST_MIN				"W"
+# define FLOOR_MIN				"F"
+# define CEIL_MIN				"C"
+# define NORTH_ABBREV			"NO"
+# define SOUTH_ABBREV			"SO"
+# define EAST_ABBREV			"EA"
+# define WEST_ABBREV			"WE"
+# define NORTH_LETTER			'N'
+# define SOUTH_LETTER			'S'
+# define EAST_LETTER			'E'
+# define WEST_LETTER			'W'
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:55:28 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/03 12:03:42 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 20:13:48 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@
 
 static void	ft_assign_texture_path_2(t_cub3d *cub, char **cell)
 {
-	if (cell[0] && cell[1] && !ft_strcmp(cell[0], "C"))
+	if (cell[0] && cell[1] && !ft_strcmp(cell[0], CEIL_MIN))
 	{
 		cub->textures.sky_color = ft_fetch_rgb(cell);
 		cub->textures.sky_flag = 1;
 	}
-	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], "F"))
+	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], FLOOR_MIN))
 	{
 		cub->textures.floor_color = ft_fetch_rgb(cell);
 		cub->textures.floor_flag = 1;
@@ -77,22 +77,22 @@ static void	ft_assign_texture_path_2(t_cub3d *cub, char **cell)
 
 static void	ft_assign_texture_path(t_cub3d *cub, char **cell)
 {
-	if (cell[0] && cell[1] && !ft_strcmp(cell[0], "NO"))
+	if (cell[0] && cell[1] && !ft_strcmp(cell[0], NORTH_ABBREV))
 	{
 		cub->textures.north_path = ft_strdup(cell[1]);
 		cub->textures.north_flag = 1;
 	}
-	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], "SO"))
+	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], SOUTH_ABBREV))
 	{
 		cub->textures.south_path = ft_strdup(cell[1]);
 		cub->textures.south_flag = 1;
 	}
-	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], "EA"))
+	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], EAST_ABBREV))
 	{
 		cub->textures.east_path = ft_strdup(cell[1]);
 		cub->textures.east_flag = 1;
 	}
-	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], "WE"))
+	else if (cell[0] && cell[1] && !ft_strcmp(cell[0], WEST_ABBREV))
 	{
 		cub->textures.west_path = ft_strdup(cell[1]);
 		cub->textures.west_flag = 1;

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:09:41 by drosales          #+#    #+#             */
-/*   Updated: 2025/02/03 11:59:57 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:03:17 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@
 
 void	ft_angle(t_cub3d *cub, char cardinal)
 {
-	if (cardinal == 'N')
+	if (cardinal == NORTH_LETTER)
 		cub->player.angle = 90;
-	if (cardinal == 'S')
+	if (cardinal == SOUTH_LETTER)
 		cub->player.angle = 270;
-	if (cardinal == 'E')
+	if (cardinal == EAST_LETTER)
 		cub->player.angle = 0;
-	if (cardinal == 'W')
+	if (cardinal == WEST_LETTER)
 		cub->player.angle = 180;
 }

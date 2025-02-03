@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:50:17 by drosales          #+#    #+#             */
-/*   Updated: 2025/02/03 12:00:17 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:04:06 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	ft_player_position(t_cub3d *cub, char **map)
 		y = 0;
 		while (map[x][y])
 		{
-			if (map[x][y] == 'N' || map[x][y] == 'S' \
-				|| map[x][y] == 'W' || map[x][y] == 'E')
+			if (map[x][y] == NORTH_LETTER || map[x][y] == SOUTH_LETTER \
+				|| map[x][y] == WEST_LETTER || map[x][y] == EAST_LETTER)
 			{
 				cell = map[x][y];
 				cub->player.x_player_pos = y + 0.5;
