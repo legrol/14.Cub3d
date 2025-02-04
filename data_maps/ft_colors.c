@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 18:30:08 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/26 18:13:21 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/04 22:43:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@
 
 static void	ft_handle_rgb_error(char **cell, int red, int green, int blue)
 {
-	ft_manage_err(RGB_ERR);
 	ft_printf(BDRED "%s. " RESET, cell[0]);
 	if (red < 0 || red > RGB_VALID_MAX)
 		ft_printf(RED RR_INDICATOR RESET "%i\n", red);
@@ -85,32 +84,6 @@ static void	ft_handle_rgb_error(char **cell, int red, int green, int blue)
 		ft_printf(BLUE BR_INDICATOR RESET "%i\n", blue);
 	ft_printf("\n");
 }
-
-// static void	ft_handle_rgb_error(char **cell, int red, int green, int blue)
-// {
-// 	ft_manage_err(RGB_ERR);
-// 	ft_putstr_fd(cell[0], 2);
-// 	ft_putstr_fd(". ", 2);
-// 	if (red < 0 || red > RGB_VALID_MAX)
-// 	{
-// 		ft_putstr_fd("red = ", 2);
-// 		ft_putnbr_fd(red, 2);
-// 		ft_putstr_fd(". ", 2);
-// 	}
-// 	if (green < 0 || green > RGB_VALID_MAX)
-// 	{
-// 		ft_putstr_fd("green = ", 2);
-// 		ft_putnbr_fd(green, 2);
-// 		ft_putstr_fd(". ", 2);
-// 	}
-// 	if (blue < 0 || blue > RGB_VALID_MAX)
-// 	{
-// 		ft_putstr_fd("blue = ", 2);
-// 		ft_putnbr_fd(blue, 2);
-// 		ft_putstr_fd(".", 2);
-// 	}
-// 	ft_putstr_fd("\n", 2);
-// }
 
 static unsigned int	ft_encode_rgb(char **cell)
 {
@@ -129,6 +102,7 @@ static unsigned int	ft_encode_rgb(char **cell)
 	if (red < RGB_VALID_MIN || red > RGB_VALID_MAX || green < RGB_VALID_MIN \
 	|| green > RGB_VALID_MAX || blue < RGB_VALID_MIN || blue > RGB_VALID_MAX)
 	{
+		ft_manage_err(RGB_ERR);
 		ft_handle_rgb_error(cell, red, green, blue);
 		return (EXIT_FAILURE);
 	}
