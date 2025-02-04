@@ -113,5 +113,5 @@ void	ft_moves(t_cub3d *cub)
 	if (mlx_is_key_down(cub->mlx, MLX_KEY_E))
 		cub->move = 12;
 	if (!mlx_is_key_down(cub->mlx, MLX_KEY_E))
-		cub->move = 6;
+		cub->move = 8;
 }
