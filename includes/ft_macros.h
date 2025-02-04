@@ -102,5 +102,8 @@ one."
 # define SOUTH_LETTER			'S'
 # define EAST_LETTER			'E'
 # define WEST_LETTER			'W'
+# define RR_INDICATOR			"red = "
+# define GR_INDICATOR			"green = "
+# define BR_INDICATOR			"blue = "
 
 #endif

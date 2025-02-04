@@ -3,7 +3,7 @@ SO ./img/onepiece_wall_nami_inverted.png
 EA ./img/onepiece_wall_monkey.png
 WE ./img/onepiece_wall_nico_inverted.png
 F 175, 2563, 133  
-C 153, 204, 255
+C 255, 512, 255
 
         1111111111111111111111111
         1000000000110000000000001

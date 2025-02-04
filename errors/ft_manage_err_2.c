@@ -43,12 +43,12 @@ void	ft_manage_err_rgb(const char *err, char **cell, int row, int col)
 {
 	ft_printf(BDRED "Error: \n" RESET RED INIT_ERR RESET GREEN ARROW RESET \
 	YELLOW "%s\n", err);
-	ft_printf(RED "%s" RESET YELLOW LINE2_ERR RESET RED "%i.\n" RESET, \
+	ft_printf(RED "%s" RESET YELLOW LINE2_ERR RESET RED "%i.\n\n" RESET, \
 	cell[row][col], row);
 }
 
 void	ft_manage_err_id(const char *id)
 {
 	ft_printf(BDRED "Error: \n" RESET RED INIT_ERR RESET GREEN ARROW RESET \
-	YELLOW IDENT_ERR RESET RED "%s" RESET YELLOW IDENT2_ERR RESET "\n", id);
+	YELLOW IDENT_ERR RESET RED "%s" RESET YELLOW IDENT2_ERR RESET "\n\n", id);
 }

@@ -76,28 +76,41 @@
 static void	ft_handle_rgb_error(char **cell, int red, int green, int blue)
 {
 	ft_manage_err(RGB_ERR);
-	ft_putstr_fd(cell[0], 2);
-	ft_putstr_fd(". ", 2);
+	ft_printf(BDRED "%s. " RESET, cell[0]);
 	if (red < 0 || red > RGB_VALID_MAX)
-	{
-		ft_putstr_fd("red = ", 2);
-		ft_putnbr_fd(red, 2);
-		ft_putstr_fd(". ", 2);
-	}
+		ft_printf(RED RR_INDICATOR RESET "%i\n", red);
 	if (green < 0 || green > RGB_VALID_MAX)
-	{
-		ft_putstr_fd("green = ", 2);
-		ft_putnbr_fd(green, 2);
-		ft_putstr_fd(". ", 2);
-	}
+		ft_printf(GREEN GR_INDICATOR RESET "%i\n", green);
 	if (blue < 0 || blue > RGB_VALID_MAX)
-	{
-		ft_putstr_fd("blue = ", 2);
-		ft_putnbr_fd(blue, 2);
-		ft_putstr_fd(".", 2);
-	}
-	ft_putstr_fd("\n", 2);
+		ft_printf(BLUE BR_INDICATOR RESET "%i\n", blue);
+	ft_printf("\n");
 }
+
+// static void	ft_handle_rgb_error(char **cell, int red, int green, int blue)
+// {
+// 	ft_manage_err(RGB_ERR);
+// 	ft_putstr_fd(cell[0], 2);
+// 	ft_putstr_fd(". ", 2);
+// 	if (red < 0 || red > RGB_VALID_MAX)
+// 	{
+// 		ft_putstr_fd("red = ", 2);
+// 		ft_putnbr_fd(red, 2);
+// 		ft_putstr_fd(". ", 2);
+// 	}
+// 	if (green < 0 || green > RGB_VALID_MAX)
+// 	{
+// 		ft_putstr_fd("green = ", 2);
+// 		ft_putnbr_fd(green, 2);
+// 		ft_putstr_fd(". ", 2);
+// 	}
+// 	if (blue < 0 || blue > RGB_VALID_MAX)
+// 	{
+// 		ft_putstr_fd("blue = ", 2);
+// 		ft_putnbr_fd(blue, 2);
+// 		ft_putstr_fd(".", 2);
+// 	}
+// 	ft_putstr_fd("\n", 2);
+// }
 
 static unsigned int	ft_encode_rgb(char **cell)
 {

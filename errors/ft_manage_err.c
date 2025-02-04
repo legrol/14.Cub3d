@@ -74,7 +74,7 @@
 void	ft_manage_err(const char *err)
 {
 	ft_printf(BDRED "Error: \n" RESET RED INIT_ERR RESET GREEN ARROW RESET \
-	YELLOW "%s\n" RESET, err);
+	YELLOW "%s\n\n" RESET, err);
 }
 
 void	ft_invalid_char(char **map, int line, int pos)
@@ -86,7 +86,7 @@ void	ft_invalid_char(char **map, int line, int pos)
 	YELLOW CHAR1_ERR "\"" RESET BLUE "%c" RESET YELLOW "\" ...\n" RESET, \
 	letter);
 	ft_printf(YELLOW CHAR2_ERR RESET RED "%i" RESET YELLOW CHAR3_ERR RESET \
-	RED "%i" RESET YELLOW "." RESET "\n", line + 1, pos + 1);
+	RED "%i" RESET YELLOW "." RESET "\n\n", line + 1, pos + 1);
 }
 
 void	ft_invalid_side(int line, int warning)
@@ -94,12 +94,12 @@ void	ft_invalid_side(int line, int warning)
 	if (warning == 1)
 	{
 		ft_printf(BDRED "Error: \n" RESET RED SIDE_LEFT_ERR "\n" RESET);
-		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n" RESET, line + 1);
+		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n\n" RESET, line + 1);
 	}
 	if (warning == 2)
 	{
 		ft_printf(BDRED "Error: \n" RESET RED SIDE_RIGHT_ERR "\n" RESET);
-		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n" RESET, line + 1);
+		ft_printf(YELLOW LINE_ERR RESET GREEN "%i.\n\n" RESET, line + 1);
 	}
 }
 
@@ -107,13 +107,13 @@ void	ft_forbidden_space(int line, int col)
 {
 	ft_printf(BDRED "Error: \n" RESET);
 	ft_printf(RED FORB_SPC_ERR RESET YELLOW FORB_SPC2_ERR RESET GREEN "%i" \
-	RESET YELLOW CHAR3_ERR RESET GREEN "%i.\n", line + 1, col + 1);
+	RESET YELLOW CHAR3_ERR RESET GREEN "%i.\n\n", line + 1, col + 1);
 }
 
 void	ft_players(int index)
 {
 	if (index == 0)
-		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_0_ERR RESET "\n");
+		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_0_ERR RESET "\n\n");
 	if (index > 1)
-		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_NO1_ERR RESET "\n");
+		ft_printf(BDRED "Error: \n" RESET YELLOW PLAYERS_NO1_ERR RESET "\n\n");
 }
