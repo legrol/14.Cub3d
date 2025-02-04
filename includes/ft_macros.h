@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:08:07 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/03 20:35:22 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/04 21:01:14 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ one."
 # define IDENT3_ERR				"❗Invalid identifier."
 # define RGB_ERR				"❗Wrong rgb value."
 # define FORMAT_RGB_ERR			"❗Invalid RGB format."
-# define ARG_RGB_ERR			"❗Wrong rgb argument."
+# define ARG_RGB_ERR			"❗Wrong value rgb in argument."
 # define LINE2_ERR				" in the line "
 # define ARG_FILE_ERR			"❗Extra argument in file."
 # define TEXTURE_ERR			"❗Wrong texture format."
