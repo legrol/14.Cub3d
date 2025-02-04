@@ -40,6 +40,16 @@
  * 
  */
 
+static char *ft_trim_str(char *s1, char *set)
+{
+	char	*new;
+
+	new = ft_strtrim(s1, set);
+	if (s1)
+		free(s1);
+	return (new);
+}
+
 int	ft_mapping(t_cub3d *cub, int fd)
 {
 	char	*lines;
@@ -47,19 +57,22 @@ int	ft_mapping(t_cub3d *cub, int fd)
 
 	lines = NULL;
 	map = NULL;
+
 	lines = get_next_line(fd);
 	if (!lines)
 		return (ft_manage_err(READ_ERR), EXIT_FAILURE);
 	map = ft_matrix_to_str(lines, fd);
 	if (!map)
 		return (ft_manage_err(MATRIX_TO_STR_ERR), EXIT_FAILURE);
-	map = ft_strtrim(map, "\n");
+	map = ft_trim_str(map, "\n");
 	if (!map)
 		return (ft_manage_err(FT_STRTRIM_ERR), EXIT_FAILURE);
 	if (ft_map_spliting(cub, map))
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
+
+
 
 int	ft_analyzer(char *argv, t_cub3d *cub)
 {

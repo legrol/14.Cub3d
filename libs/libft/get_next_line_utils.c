@@ -19,7 +19,7 @@ size_t	ft_gnl_len(char *str)
 	i = 0;
 	if (!str)
 		return (0);
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		i++;
 	}
@@ -32,16 +32,16 @@ char	*ft_gnl_strchr(char	*str, int c)
 
 	i = 0;
 	if (!str)
-		return (NULL);
+		return (0);
 	if (c == '\0')
 		return ((char *)&str[ft_gnl_len(str)]);
 	while (str[i])
 	{
-		if (str[i] == (char)c)
+		if (str[i] == (char) c)
 			return ((char *)&str[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 char	*ft_gnlstrjoin(char *str1, char *str2)
@@ -53,12 +53,14 @@ char	*ft_gnlstrjoin(char *str1, char *str2)
 	if (!str1)
 	{
 		str1 = (char *)malloc(sizeof(char) * 1);
+		if(!str1)
+			return (NULL);
 		str1[0] = '\0';
 	}
 	if (!str2)
 		return (NULL);
-	end = (char *)malloc(sizeof(char) * (ft_strlen(str1) + \
-	ft_strlen(str2) + 1));
+	end = (char *)malloc(sizeof(char) * (ft_gnl_len(str1) + \
+	ft_gnl_len(str2) + 1));
 	if (end == NULL)
 		return (NULL);
 	i = 0;

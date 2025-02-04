@@ -50,7 +50,7 @@ static void	ft_callback(void *value)
 void	ft_playing_mode(t_cub3d *cub)
 {
 	cub->mlx = mlx_init(WIDTH, HEIGHT, "Cub3D", true);
-	mlx_set_cursor_mode(cub->mlx, MLX_MOUSE_DISABLED);
+	mlx_set_cursor_mode(cub->mlx, MLX_MOUSE_NORMAL);
 	if (!cub->mlx)
 	{
 		ft_manage_err(MLX_INIT_ERR);

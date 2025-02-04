@@ -80,22 +80,27 @@ int	ft_checking_lines(char	*map)
 	return (EXIT_SUCCESS);
 }
 
-char	*ft_matrix_to_str(char	*c, int fd)
+char	*ft_matrix_to_str(char *c, int fd)
 {
 	char	*map;
+	char	*temp;
 
 	map = NULL;
 	while (c)
 	{
-		if (!c)
-			return (ft_manage_err(READ_ERR), NULL);
-		map = ft_new_strjoin(map, c);
-		if (!map)
+		temp = ft_new_strjoin(map, c);
+		if (!temp)
+		{
+			free(c);
 			return (ft_manage_err(MATRIX_TO_STR_ERR), NULL);
+		}
+		map = temp;
+		free(c);
 		c = get_next_line(fd);
 	}
 	return (map);
 }
+
 
 int	ft_map_spliting(t_cub3d *cub, char *map)
 {

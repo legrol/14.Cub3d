@@ -43,23 +43,28 @@ char ft_gnl_strchr(char *str, int c)
 ```c
 char *ft_gnlstrjoin(char *str1, char *str2)
 {
-    size_t i = 0, j = 0;
+    size_t  i;
+    size_t  j;
     char *end;
+
     if (!str1) 
     {
         str1 = (char *)malloc(sizeof(char) * 1);
         str1[0] = '\0';
     }
     if (!str2) 
-        return NULL;
+        return (NULL);
     end = (char *)malloc(sizeof(char) * (ft_len(str1) + ft_len(str2) + 1));
     if (end == NULL) 
-        return NULL;
+        return (NULL);
+    i = 0;
+    j = 0;
     while (str1[i]) 
         end[j++] = str1[i++];
     i = 0;
     while (str2[i]) 
         end[j++] = str2[i++];
+    i = 0;
     end[j] = '\0';
     free(str1);
     return end;
@@ -73,12 +78,12 @@ char *ft_gnlstrjoin(char *str1, char *str2)
 ```c
 char *ft_alloc(int fd, char *str)
 {
-    char *buff;
+    char    *buff;
     ssize_t len;
 
     buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
     if (!buff) 
-        return NULL;
+        return (NULL);
     len = 1;
     while (!(ft_gnlstrchr(str, '\n')) && len > 0) 
     {
@@ -86,13 +91,13 @@ char *ft_alloc(int fd, char *str)
         if (len == -1) 
         {
             free(buff);
-            return NULL;
+            return (NULL);
         }
         buff[len] = '\0';
         str = ft_gnlstrjoin(str, buff);
     }
     free(buff);
-    return str;
+    return (str);
 }
 ```
     Objetivo: Esta función gestiona la lectura del archivo. Lee bloques de datos en un búfer de tamaño BUFFER_SIZE, hasta que encuentra un salto de línea o el final del archivo.
@@ -106,12 +111,12 @@ char *ft_nline(char *str)
     int i = 0;
 
     if (str[i] == 0) 
-        return NULL;
+        return (NULL);
     while (str[i] && str[i] != '\n') 
         i++;
     new = (char *)malloc(sizeof(char) * (i + 2));
     if (!new) 
-        return NULL;
+        return (NULL);
     i = 0;
     while (str[i] && str[i] != '\n') 
     {
@@ -124,7 +129,7 @@ char *ft_nline(char *str)
         i++;
     }
     new[i] = '\0';
-    return new;
+    return (new);
 }
 ```
     Objetivo: Esta función extrae la siguiente línea de la cadena str, que contiene los datos leídos del archivo.
@@ -135,9 +140,14 @@ char *ft_nline(char *str)
     char *ft_rline(char *line)
     {
         char *str;
-        int i = 0, j = 0;
+        int i; 
+        int j;
 
-        while (line[i] && line[i] != '\n') i++;
+        i= 0; 
+        j = 0;
+
+        while (line[i] && line[i] != '\n') 
+            i++;
         if (!line[i]) 
         {
             free(line);
@@ -145,9 +155,11 @@ char *ft_nline(char *str)
         }
         str = (char *)malloc(sizeof(char) * (ft_len(line) - i + 1));
         if (!str) 
-            return NULL;
+            return (NULL);
         i++;
-        while (line[i]) str[j++] = line[i++];
+        j = 0;
+        while (line[i]) 
+            str[j++] = line[i++];
         str[j] = '\0';
         free(line);
         return str;

@@ -98,9 +98,8 @@ int	ft_verify_spaces(char **map)
 	int	output;
 
 	x = 0;
-	y = 0;
 	output = 0;
-	while (map[x][y])
+	while (map[x])
 	{
 		y = 0;
 		while (map[x][y])

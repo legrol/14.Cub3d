@@ -42,7 +42,7 @@ MK_					= && make
 #    -----------                                                               #
 
 ANALYZ_DIR			= ./analyzer
-CALCUL_DIR			=./calculations
+CALCUL_DIR			= ./calculations
 CONTROL_DIR			= ./control
 DATAMAPS_DIR		= ./data_maps
 ERRORS_DIR			= ./errors
@@ -76,7 +76,7 @@ LIBMLX42_A          = ${MLX42_LIB}/libmlx42.a
 # ══ Flags ═══════════════════════════════════════════════════════════════════ #
 #    -----                                                                     #
 
-CFLAGS 				= -Wall -Werror -Wextra -g
+CFLAGS 				= -Wall -Werror -Wextra -fsanitize=address -g
 IFLAGS				= -I${INCLUDES_DIR} -I${MLX42_INCLUDE}
 LFLAGS				= -L${LIBRARIES}/${LIBFT_DIR} -lft \
 						-L${LIBRARIES}/${PRINTFT_DIR} -lftprintf \
