@@ -95,7 +95,10 @@ static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
 			return (EXIT_FAILURE);
 		j++;
 		if (ft_verify_texture(cub, cell, &i, j))
+		{
 			*fd = 1;
+			return (EXIT_FAILURE);
+		}			
 	}
 	ft_verify_ids(cub, fd, i);
 	return (EXIT_SUCCESS);
