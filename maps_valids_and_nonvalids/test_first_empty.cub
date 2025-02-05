@@ -1,10 +1,9 @@
 
-
 NO ./img/onepiece_wall_chopper.png
 SO ./img/onepiece_wall_nami_inverted.png
 EA ./img/onepiece_wall_monkey.png
 WE ./img/onepiece_wall_nico_inverted.png
-F 175, , 133  
+F 175, 80, 85  
 C 153, 204, 255
 
         1111111111111111111111111
