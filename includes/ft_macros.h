@@ -82,6 +82,13 @@ one."
 # define SOUTH_ERR				"🌎 Error loading image of South Wall..."
 # define EAST_ERR				"🌎 Error loading image of East Wall..."
 # define WEST_ERR				"🌎 Error loading image of West Wall..."
+# define DUP_NO_ERR				"❗Duplicate NORTH texture identifier."
+# define DUP_SO_ERR				"❗Duplicate SOUTH texture identifier."
+# define DUP_EA_ERR				"❗Duplicate EAST texture identifier."
+# define DUP_WE_ERR				"❗Duplicate WEST texture identifier."
+# define RR_INDICATOR			"red = "
+# define GR_INDICATOR			"green = "
+# define BR_INDICATOR			"blue = "
 # define CEIL					"CEILING"
 # define FLOOR					"FLOOR"
 # define NORTH					"NORTH"
@@ -102,8 +109,5 @@ one."
 # define SOUTH_LETTER			'S'
 # define EAST_LETTER			'E'
 # define WEST_LETTER			'W'
-# define RR_INDICATOR			"red = "
-# define GR_INDICATOR			"green = "
-# define BR_INDICATOR			"blue = "
 
 #endif

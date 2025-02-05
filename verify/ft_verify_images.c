@@ -90,8 +90,9 @@ static int	ft_verify_open_file(char *file, char *image)
 
 static int	ft_verify_arguments(char **cell)
 {
-	if (cell && cell[2] && ft_strcmp(cell[0], CEIL_MIN) \
-	&& ft_strcmp(cell[0], FLOOR_MIN) && cell[0][0] != '1')
+	if (cell && ft_split_len(cell) > 2 && \
+	ft_strcmp(cell[0], CEIL_MIN) && \
+	ft_strcmp(cell[0], FLOOR_MIN) && cell[0][0] != '1')
 		return (ft_manage_err(ARG_FILE_ERR), EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
