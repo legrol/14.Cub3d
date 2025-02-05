@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 07:07:34 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/01/27 20:58:42 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/05 12:16:44 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_gnlstrjoin(char *str1, char *str2)
 	if (!str1)
 	{
 		str1 = (char *)malloc(sizeof(char) * 1);
-		if(!str1)
+		if (!str1)
 			return (NULL);
 		str1[0] = '\0';
 	}
@@ -70,9 +70,7 @@ char	*ft_gnlstrjoin(char *str1, char *str2)
 	i = 0;
 	while (str2[i])
 		end[j++] = str2[i++];
-	end[j] = '\0';
-	free(str1);
-	return (end);
+	return (end[j] = '\0', free(str1), end);
 }
 
 char	*ft_alloc(int fd, char *str)

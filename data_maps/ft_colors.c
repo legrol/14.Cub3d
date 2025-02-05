@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 18:30:08 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/04 22:43:14 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/05 12:47:39 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,8 @@ static unsigned int	ft_parse_rgb_hex(char **cell)
 	rgb = ft_split(cell[1], ',');
 	if (!rgb)
 		return (ft_manage_err(SPLIT_ERR), EXIT_FAILURE);
+	if (ft_split_len(rgb) != 3)
+		return (ft_split_clear(rgb), EXIT_FAILURE);
 	red = ft_atoi(rgb[0]);
 	green = ft_atoi(rgb[1]);
 	blue = ft_atoi(rgb[2]);

@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 23:24:40 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/01 14:35:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/05 11:37:29 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
  * 
  */
 
-static char *ft_trim_str(char *s1, char *set)
+static char	*ft_trim_str(char *s1, char *set)
 {
 	char	*new;
 
@@ -57,7 +57,6 @@ int	ft_mapping(t_cub3d *cub, int fd)
 
 	lines = NULL;
 	map = NULL;
-
 	lines = get_next_line(fd);
 	if (!lines)
 		return (ft_manage_err(READ_ERR), EXIT_FAILURE);
@@ -71,8 +70,6 @@ int	ft_mapping(t_cub3d *cub, int fd)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
-
-
 
 int	ft_analyzer(char *argv, t_cub3d *cub)
 {

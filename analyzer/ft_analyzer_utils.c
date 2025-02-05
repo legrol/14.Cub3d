@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 19:29:59 by drosales          #+#    #+#             */
-/*   Updated: 2025/02/01 14:35:26 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/05 11:37:50 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,6 @@ char	*ft_matrix_to_str(char *c, int fd)
 	}
 	return (map);
 }
-
 
 int	ft_map_spliting(t_cub3d *cub, char *map)
 {

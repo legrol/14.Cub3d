@@ -6,7 +6,7 @@
 /*   By: rdel-olm <rdel-olm@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 01:10:32 by rdel-olm          #+#    #+#             */
-/*   Updated: 2025/02/01 14:36:51 by rdel-olm         ###   ########.fr       */
+/*   Updated: 2025/02/05 11:39:22 by rdel-olm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ static int	ft_get_walls_data(t_cub3d *cub, int *flag, int *fd)
 		{
 			*fd = 1;
 			return (EXIT_FAILURE);
-		}			
+		}
 	}
 	ft_verify_ids(cub, fd, i);
 	return (EXIT_SUCCESS);
