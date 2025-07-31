@@ -47,7 +47,29 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 ### Gestión de Eventos y Entradas del Jugador:
 - Implementar un sistema para manejar eventos del teclado y del ratón, adaptando el movimiento y la interacción en tiempo real.
 - Garantizar una experiencia de usuario fluida y receptiva.
-  
+
+## ![Estructura](https://img.shields.io/badge/Estructura-orange?style=for-the-badge)
+
+```text
+14.Cub3d-main/
+├── includes/              
+│   └── cub3d.h            # Prototipos, estructuras y defines
+├── srcs/                  
+│   ├── main.c             # Entrada, init MLX y bucle principal
+│   ├── parsing.c          # Lectura y validación de archivo .cub
+│   ├── raycasting.c       # Cálculo de rayos y detección de colisiones
+│   ├── render.c           # Dibujo de paredes, suelo/techo y minimapa
+│   ├── events.c           # Gestión de teclado y ratón
+│   ├── utils.c            # Funciones auxiliares (vector, memoria…)
+│   └── …
+├── textures/              
+│   └── wall.xpm           # Ejemplo de textura para paredes
+├── maps/                  
+│   └── example.cub        # Mapa de prueba
+├── Makefile               # Reglas de compilación
+└── cub3d                  # Ejecutable resultante
+```
+
 ## ![Compilar el proyecto](https://img.shields.io/badge/Compilar%20el%20proyecto-blue?style=for-the-badge)
 
 &nbsp;&nbsp;&nbsp;&nbsp;make
