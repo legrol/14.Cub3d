@@ -12,14 +12,13 @@
 
 ---
 
-## Objetivo del Proyecto
 ## ![Objetivo del Proyecto](https://img.shields.io/badge/Objetivo_del_Proyecto-blue?style=for-the-badge)
 
 El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D funcional utilizando el algoritmo de **raycasting**. Este enfoque se inspira en clásicos como *Wolfenstein 3D*, donde el renderizado en 3D se logra simulando perspectivas en tiempo real dentro de un entorno 2D. A diferencia de motores gráficos modernos como Unity o Unreal Engine, este proyecto busca explorar conceptos fundamentales de programación gráfica desde cero, lo que incluye el manejo directo de píxeles, texturas y geometría.
 
 ---
 
-## Objetivos Específicos
+## ![Objetivos Específicos](https://img.shields.io/badge/Objetivo_Específicos-orange?style=for-the-badge)
 
 ### Renderizado en 3D mediante Raycasting:
 - Implementar un motor gráfico que utiliza raycasting para calcular la distancia a las paredes del entorno y renderizar la escena en perspectiva.
