@@ -4,7 +4,7 @@
 
 **Cub3d** es un juego 3D basado en el concepto de raycasting, creado como parte del proyecto de la escuela 42. En este juego, el jugador navega por un mundo en 3D utilizando rayos para detectar las paredes y las texturas, con el objetivo de explorar y interactuar con su entorno.
 
-## Participantes
+# ![Participantes](https://img.shields.io/badge/Participantes-orange?style=for-the-badge)
 
 - **legrol** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=for-the-badge&logo=github&logoColor=white&color=181717)](https://github.com/legrol)
 
