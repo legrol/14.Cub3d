@@ -47,3 +47,53 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 ### Gestión de Eventos y Entradas del Jugador:
 - Implementar un sistema para manejar eventos del teclado y del ratón, adaptando el movimiento y la interacción en tiempo real.
 - Garantizar una experiencia de usuario fluida y receptiva.
+  
+## ![Compilar el proyecto](https://img.shields.io/badge/Compilar%20el%20proyecto-blue?style=for-the-badge)
+
+&nbsp;&nbsp;&nbsp;&nbsp;make
+
+- make all — Compila toda la fuente y genera el ejecutable cub3d.
+
+- make clean — Elimina los objetos intermedios (*.o).
+
+- make fclean — Además de clean, elimina cub3d.
+
+- make re — Ejecuta fclean y luego all.
+
+## ![Uso](https://img.shields.io/badge/Uso-blue?style=for-the-badge)
+
+- Para ejecutar el programa principal:
+
+```bash
+        ./cub3d maps/example.cub
+```
+
+- Controles por teclado:
+
+    -  Flechas `←` `↑` `→` `↓` => Mover la vista.
+
+    -  `+` / `-` => Zoom in / out.
+
+    -  `W` / `S` => Rotar en X.
+
+    -  `A` / `D` => Rotar en Y.
+
+    -  `Q` / `E` => Rotar en Z.
+
+    -  `R` => Resetear vista.
+
+    -  `ESC` => Cerrar la ventana y salir.
+ 
+      
+ 
+    -  `W` / `A` / `S` / `D` => Moverse adelante / izquierda / atrás / derecha.
+
+    -  Flechas `←` `→` => Girar la cámara.
+
+    -  `Esc` => Salir del programa.
+
+    -  `Mover el ratón` => Rotar la vista horizontalmente.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
