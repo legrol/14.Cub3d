@@ -7,7 +7,9 @@
 ## Participantes
 
 - **legrol** - [GitHub Profile](https://github.com/rdel-olm](https://github.com/legrol)
+- **legrol** [![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=for-the-badge&logo=github&logoColor=white&color=181717)](https://github.com/legrol)
 - **drosales96** - [GitHub Profile](https://github.com/drosales](https://github.com/drosales96)
+- **drosales96** [![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=for-the-badge&logo=github&logoColor=white&color=181717)](https://github.com/drosales96)
 
 ---
 
