@@ -48,7 +48,7 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 - Implementar un sistema para manejar eventos del teclado y del ratón, adaptando el movimiento y la interacción en tiempo real.
 - Garantizar una experiencia de usuario fluida y receptiva.
 
-## ![Estructura](https://img.shields.io/badge/Estructura-orange?style=for-the-badge)
+## ![Estructura](https://img.shields.io/badge/Estructura-yellow?style=for-the-badge)
 
 ```text
 14.Cub3d-main/
