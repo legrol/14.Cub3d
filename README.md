@@ -76,7 +76,7 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 
     -  `Esc`                 => Salir del programa.
 
-    -  `Mover el ratón`     => Rotar la vista horizontalmente.
+    -  `Mover el ratón`      => Rotar la vista horizontalmente.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
