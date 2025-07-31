@@ -74,9 +74,9 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 
     -  Flechas `←` `→`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Girar la cámara.
 
-    -  `Esc`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Salir del programa.
+    -  `Esc`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> Salir del programa.
 
-    -  `Mover el ratón`&nbsp;=> Rotar la vista horizontalmente.
+    -  `Mover el ratón`&nbsp;&nbsp;=> Rotar la vista horizontalmente.
 
 &nbsp;&nbsp;&nbsp;
 
