@@ -6,7 +6,7 @@
 
 ---
 
-# ![Participantes](https://img.shields.io/badge/Participantes-orange?style=for-the-badge)
+# ![Participantes](https://img.shields.io/badge/Participantes-green?style=for-the-badge)
 
 - **legrol** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=for-the-badge&logo=github&logoColor=white&color=181717)](https://github.com/legrol)
 
