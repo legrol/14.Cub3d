@@ -68,31 +68,15 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
         ./cub3d maps/example.cub
 ```
 
-- Controles por teclado:
-
-    -  Flechas `←` `↑` `→` `↓` => Mover la vista.
-
-    -  `+` / `-` => Zoom in / out.
-
-    -  `W` / `S` => Rotar en X.
-
-    -  `A` / `D` => Rotar en Y.
-
-    -  `Q` / `E` => Rotar en Z.
-
-    -  `R` => Resetear vista.
-
-    -  `ESC` => Cerrar la ventana y salir.
- 
-      
+- Controles por teclado:    
  
     -  `W` / `A` / `S` / `D` => Moverse adelante / izquierda / atrás / derecha.
 
-    -  Flechas `←` `→` => Girar la cámara.
+    -  Flechas `←` `→`       => Girar la cámara.
 
-    -  `Esc` => Salir del programa.
+    -  `Esc`                 => Salir del programa.
 
-    -  `Mover el ratón` => Rotar la vista horizontalmente.
+    -  `Mover el ratón`     => Rotar la vista horizontalmente.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
