@@ -2,7 +2,7 @@
 
 ![Cubed Logo](img/cubed.jpeg)
 
-**Cubed** es un juego 3D basado en el concepto de raycasting, creado como parte del proyecto de la escuela 42. En este juego, el jugador navega por un mundo en 3D utilizando rayos para detectar las paredes y las texturas, con el objetivo de explorar y interactuar con su entorno.
+**Cub3d** es un juego 3D basado en el concepto de raycasting, creado como parte del proyecto de la escuela 42. En este juego, el jugador navega por un mundo en 3D utilizando rayos para detectar las paredes y las texturas, con el objetivo de explorar y interactuar con su entorno.
 
 ## Participantes
 
@@ -13,7 +13,7 @@
 
 ## Objetivo del Proyecto
 
-El propósito del proyecto **Cubed** es desarrollar un motor de juego en 3D funcional utilizando el algoritmo de **raycasting**. Este enfoque se inspira en clásicos como *Wolfenstein 3D*, donde el renderizado en 3D se logra simulando perspectivas en tiempo real dentro de un entorno 2D. A diferencia de motores gráficos modernos como Unity o Unreal Engine, este proyecto busca explorar conceptos fundamentales de programación gráfica desde cero, lo que incluye el manejo directo de píxeles, texturas y geometría.
+El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D funcional utilizando el algoritmo de **raycasting**. Este enfoque se inspira en clásicos como *Wolfenstein 3D*, donde el renderizado en 3D se logra simulando perspectivas en tiempo real dentro de un entorno 2D. A diferencia de motores gráficos modernos como Unity o Unreal Engine, este proyecto busca explorar conceptos fundamentales de programación gráfica desde cero, lo que incluye el manejo directo de píxeles, texturas y geometría.
 
 ---
 
