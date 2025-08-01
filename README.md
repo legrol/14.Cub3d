@@ -105,7 +105,10 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 ![Vista del proyecto](https://img.shields.io/badge/Vista_del_proyecto-magenta?style=for-the-badge)
 
 <p align="center">
-  <img src="imgReadme/Img1.png" alt="Vista del proyecto" width="650"/>&nbsp;<img src="imgReadme/Img2.png" alt="Vista del proyecto" width="650"/>
+  <img src="imgReadme/Img1.png" alt="Vista del proyecto" width="400"/>
+  <img src="imgReadme/Img2.png" alt="Vista del proyecto" width="400"/>
+</p>
+<p align="center">
   <img src="imgReadme/Img3.png" alt="Vista del proyecto" width="650"/>
   <img src="imgReadme/Img4.png" alt="Vista del proyecto" width="650"/>
   <img src="imgReadme/Img5.png" alt="Vista del proyecto" width="650"/>
