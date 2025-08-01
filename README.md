@@ -113,12 +113,12 @@ El propósito del proyecto **Cub3d** es desarrollar un motor de juego en 3D func
 </p>
 <p align="center">
   <img src="imgReadme/Img3.png" alt="Vista del proyecto" width="400"/>  
-  <img src="imgReadme/Img6.png" alt="Vista del proyecto" width="400"/>
+  <img src="imgReadme/Img7.png" alt="Vista del proyecto" width="400"/>
 </p>        
 
 <p align="center">
   <img src="imgReadme/Img4.png" alt="Vista del proyecto" width="650"/>
 </p>
 <p align="center">  
-  <img src="imgReadme/Img7.png" alt="Vista del proyecto" width="650"/>
+  <img src="imgReadme/Img6.png" alt="Vista del proyecto" width="650"/>
 </p>
